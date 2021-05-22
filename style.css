@@ -1,3 +1,38 @@
-h1{
-    color: green;
+/* Les couleurs de la charte sont le bleu #0065FC, et sa version plus claire #DEEBFF ainsi que le gris pour le fond #F2F2F2.
+La police du site est Raleway. */
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
 }
+
+input, textarea, button{
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.container{
+    padding: 5px;
+    
+}
+
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.btn-inscrire{
+    border: none;
+    background: none;
+    color: #0065FC;
+    position: absolute;
+    top: 17px;
+    Right: 10px;
+}
+
+
