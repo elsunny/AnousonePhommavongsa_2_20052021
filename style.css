@@ -9,7 +9,7 @@ La police du site est Raleway. */
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
-    
+    /* border: solid 1px black; */
 }
 
 
@@ -20,6 +20,7 @@ input, textarea, button{
 
 body{
     font-size: 16px;
+    font-weight: 400;
 }
 
 /* header logo style */
@@ -39,6 +40,7 @@ body{
     position: absolute;
     top: 40px;
     Right: 10px;
+    font-weight: 600;
 }
 
 /* navigation style */
@@ -67,7 +69,7 @@ body{
     color: #0065FC;
 }
 
-/* search section */
+/* search elements */
 
 .search-title{
     text-align: center;
@@ -75,5 +77,34 @@ body{
 
 h2{
     padding: 20px 10px 10px 10px;
+    font-weight: 700;
+}
+
+.btn-search{
     
+    border: solid 1px lightgray;
+    height: 40px;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: space-around;
+    flex: 1 1 0;
+    overflow: hidden;
+}
+
+.input-text{
+    width: 75%;
+}
+
+.ico-markup{
+    background: lightgrey;
+    font-size: 20px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align:middle;
+    margin: auto;
 }
