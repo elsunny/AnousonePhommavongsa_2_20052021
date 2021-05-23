@@ -71,7 +71,7 @@ body{
 
 /* search elements */
 
-.search-title{
+.search{
     text-align: center;
 }
 
@@ -81,30 +81,33 @@ h2{
 }
 
 .btn-search{
-    
-    border: solid 1px lightgray;
-    height: 40px;
-    width: 80%;
-    text-align: center;
-    margin: auto;
-    margin-top: 20px;
+    margin-top: 25px;
+    border: solid 0.1px rgba(211, 211, 211, 0.3);
     border-radius: 10px;
-    display: inline-flex;
-    justify-content: space-around;
-    flex: 1 1 0;
     overflow: hidden;
 }
 
 .input-text{
-    width: 75%;
+    width: 240px;
+    border: none;
+    line-height: 30px;
+    padding: 7px 15px;
+    font-weight: 600;
+    
 }
 
-.ico-markup{
-    background: lightgrey;
-    font-size: 20px;
-    width: 50px;
-    line-height: 50px;
-    text-align: center;
-    vertical-align:middle;
-    margin: auto;
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+
+.ico-markup, .ico-search{
+    padding: 13px 15px;
+}
+
+.ico-search{
+    background: #0065FC;
+    color: white;
+   
+    border-radius: 10px;
 }
