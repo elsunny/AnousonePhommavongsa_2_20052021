@@ -167,3 +167,26 @@ h2{
 .btn-text {
     padding: 0 16px;
 }
+
+.info{
+    display: flex;
+}
+
+.info-ico {
+    border: solid 1px lightgray;
+    border-radius: 50%;
+    display: flex;
+    width: 30px;
+    height: 21px;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-ico i{
+    font-size: 10px;
+    color: blue;
+}
+
+.info-txt {
+    padding: 0 10px;
+}
