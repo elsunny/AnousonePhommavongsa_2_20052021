@@ -13,7 +13,6 @@ La police du site est Raleway. */
     /* border: solid 1px black; */
 }
 
-
 input, textarea, button{
     font-family: inherit;
     font-size: inherit;
@@ -27,7 +26,7 @@ body{
 /* header logo style */
 
 .logo-container{
-    padding: 20px 10px 0 10px;
+    padding: 20px 20px 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,14 +39,14 @@ body{
     color: #0065FC;
     position: absolute;
     top: 40px;
-    Right: 10px;
+    Right: 20px;
     font-weight: 600;
 }
 
 /* navigation style */
 
 .title{
-    text-align: center;
+        padding: 0 20px;
 }
 
 .navigation-lists{
@@ -82,19 +81,23 @@ body{
 }
 
 h2{
-    padding: 20px 10px 10px 10px;
+    padding: 20px 0px 10px 0px;
     font-weight: 700;
 }
 
 .btn-search{
-    margin: 25px 0;
+    margin: 25px auto;
     border: solid 0.1px rgba(211, 211, 211, 0.3);
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .input-text{
-    width: 240px;
+    width: 100%;
     border: none;
     line-height: 30px;
     padding: 7px 15px;
@@ -108,27 +111,32 @@ h2{
   }
 
 .ico-markup, .ico-search{
-    padding: 13px 15px;
+        font-size: 20px;
+}
+
+.ico-markup{
+    width: 55px;
 }
 
 .ico-search{
     background: #0065FC;
     color: white;
-   
     border-radius: 10px;
+    height: 40px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
-
-
 
 /* filtres section */
 
 .filtres{
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+        margin: auto;
+        margin-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 20px;
 }
 
 .title-filtres{
@@ -189,4 +197,30 @@ h2{
 
 .info-txt {
     padding: 0 10px;
+}
+
+/* section populaires */
+
+.pop-container {
+    margin: auto;
+    padding: 0 20px;
+    background: #F2F2F2;
+}
+
+.title-pop-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.title-pop {
+    padding: 25px 0 0px 0px;
+}
+
+.pop-ico i{
+    font-size: 23px;
+    position: absolute;
+    top: 29px;
+    right: 20px;
 }
