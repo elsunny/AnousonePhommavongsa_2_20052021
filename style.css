@@ -25,25 +25,39 @@ body{
 
 /* header logo style */
 
-.logo-container{
-    padding: 20px 20px 0 20px;
+header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    /* padding: 20px 20px 0 20px; */
     position: relative;
 }
 
+.logo{
+    
+    padding: 12px 20px 0 20px;
+}
+
+
+/* navigation style */
+
+.navigation{
+    width: 100%;
+}
+
+
 .btn-inscrire{
-    border: none;
-    background: none;
-    color: #0065FC;
+    order: -1;
     position: absolute;
-    top: 40px;
-    Right: 20px;
+    right: 20px;
+    top: 43px;
+    color: blue;
     font-weight: 600;
 }
 
-/* navigation style */
+
+
 
 .title{
         padding: 0 20px;
