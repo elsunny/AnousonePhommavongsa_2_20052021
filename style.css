@@ -23,6 +23,20 @@ body{
     font-weight: 400;
 }
 
+.h-padding{
+    padding: 0 20px;
+}
+
+.v-padding{
+    padding-top: 33px;
+
+}
+
+h2{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
 /* header logo style */
 
 header{
@@ -34,10 +48,7 @@ header{
     position: relative;
 }
 
-.logo{
-    
-    padding: 12px 20px 0 20px;
-}
+
 
 
 /* navigation style */
@@ -51,7 +62,7 @@ header{
     order: -1;
     position: absolute;
     right: 20px;
-    top: 43px;
+    top: 54px;
     color: blue;
     font-weight: 600;
 }
@@ -59,9 +70,6 @@ header{
 
 
 
-.title{
-        padding: 0 20px;
-}
 
 .navigation-lists{
     display: flex;
@@ -94,10 +102,7 @@ header{
     align-items: center;
 }
 
-h2{
-    padding: 20px 0px 10px 0px;
-    font-weight: 700;
-}
+
 
 .btn-search{
     margin: 25px auto;
@@ -145,12 +150,11 @@ h2{
 
 /* filtres section */
 
-.filtres{
+.sec-filtres{
         margin: auto;
         margin-bottom: 50px;
         display: flex;
         flex-wrap: wrap;
-        padding: 0 20px;
 }
 
 .title-filtres{
