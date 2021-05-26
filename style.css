@@ -219,10 +219,11 @@ header{
 
 /* section populaires */
 
-.pop-container {
-    margin: auto;
-    padding: 0 20px;
+
+
+.sec-populaires{
     background: #F2F2F2;
+    padding-bottom: 50px;
 }
 
 .title-pop-container{
@@ -230,15 +231,44 @@ header{
     justify-content: space-between;
     align-items: center;
     position: relative;
+    margin-bottom: 20px;
 }
 
-.title-pop {
-    padding: 25px 0 0px 0px;
-}
+
 
 .pop-ico i{
     font-size: 23px;
-    position: absolute;
-    top: 29px;
-    right: 20px;
+    
+}
+.pop-result{
+    margin-bottom: 10px;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+.pop-result-img{
+    width: 132px;
+    height: 135px;;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+}
+
+.pop-result-caption{
+    padding-left: 20px;
+}
+
+.pop-result-price{
+    font-size: 0.8rem;
+}
+
+.pop-result-title{
+    padding-top: 15px;
+    font-weight: 900;
+}
+
+.pop-result-notation{
+    margin-top: 40px;
+    color: #0065FC;
 }
