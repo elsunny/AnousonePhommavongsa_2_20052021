@@ -37,6 +37,14 @@ h2{
     margin-bottom: 10px;
 }
 
+ul{
+    list-style-type: none;
+}
+
+a:link{
+    text-decoration: none;
+}
+
 /* header logo style */
 
 header{
@@ -73,7 +81,7 @@ header{
 
 .navigation-lists{
     display: flex;
-    list-style-type: none;
+    
     padding-top: 20px;
 
     
@@ -119,7 +127,7 @@ header{
     width: 100%;
     border: none;
     line-height: 30px;
-    padding: 7px 15px;
+    padding: 5px 15px;
     font-weight: 600;
     
 }
@@ -134,7 +142,13 @@ header{
 }
 
 .ico-markup{
-    width: 55px;
+    background: #F2F2F2;
+    border-radius: 10px 0 0 10px;
+    height: 40px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ico-search{
@@ -344,4 +358,21 @@ header{
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight: 900;
+}
+
+footer{
+    background-color: #F2F2F2;
+    overflow: hidden;
+}
+
+footer h3{
+    padding-bottom: 10px;
+}
+
+footer li{
+    padding-bottom: 5px;;
+}
+
+footer ul{
+    margin-bottom: 30px;
 }
