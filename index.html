@@ -27,7 +27,7 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="main">
       <header>
         <div class="logo h-padding v-padding">
           <img
@@ -38,59 +38,59 @@
         </div>
 
         <nav class="navigation">
-          <ul class="navigation-lists">
-            <li class="navigation-list btn-hebergements"><a href="#anchor-heb">Hébergements</a></li> 
-            <li class="navigation-list btn-activites"><a href="#anchor-act">Activités</a></li></a>
-            <li class="btn-inscrire">S'inscrire</li>
+          <ul class="navigation__list">
+            <li class="navigation__list__item"><a href="#anchor-heb">Hébergements</a></li> 
+            <li class="navigation__list__item"><a href="#anchor-act">Activités</a></li></a>
+            <li class="navigation__list__item--inscrire">S'inscrire</li>
           </ul>
         </nav>
       </header>
 
       <!-- search section -->
 
-      <section class="sec-search h-padding v-padding">
+      <section class="search h-padding v-padding">
         <h2>Trouvez votre hébergement pour des vacances de rêves</h2>
         <span>En plein centre ville ou en pleine nature</span>
 
-        <div class="btn-search">
-          <span class="ico-markup"><i class="fas fa-map-marker-alt"></i></span>
+        <div class="search__button">
+          <span class="search__button__icon search__button--markup"><i class="fas fa-map-marker-alt"></i></span>
           <input
             type="text"
-            class="input-text"
+            class="search__button__input"
             placeholder="Marseille, France"
           />
-          <span class="ico-search"><i class="fas fa-search"></i></span>
+          <span class="search__button__icon search__button--loupe"><i class="fas fa-search"></i></span>
         </div>
       </section>
 
       <!-- filters buttons section -->
 
-      <section class="sec-filtres h-padding">
+      <section class="filtres h-padding">
         <h3 class="title">Filtres</h3>
 
-        <button type="button" class="btn btn-eco">
-          <span class="btn-ico"><i class="fas fa-money-bill-wave"></i></span>
-          <span class="btn-text">Économique</span>
+        <button type="button" class="filtres__button">
+          <span class="filtres__icon"><i class="fas fa-money-bill-wave"></i></span>
+          <span class="filtres__txt">Économique</span>
         </button>
 
-        <button type="button" class="btn btn-fam">
-          <span class="btn-ico"><i class="fas fa-child"></i></span>
-          <span class="btn-text">Familial</span>
+        <button type="button" class="filtres__button">
+          <span class="filtres__icon"><i class="fas fa-child"></i></span>
+          <span class="filtres__txt">Familial</span>
         </button>
 
-        <button type="button" class="btn btn-rom">
-          <span class="btn-ico"><i class="fas fa-heart"></i></span>
-          <span class="btn-text">Romantique</span>
+        <button type="button" class="filtres__button">
+          <span class="filtres__icon"><i class="fas fa-heart"></i></span>
+          <span class="filtres__txt">Romantique</span>
         </button>
 
-        <button type="button" class="btn btn-ani">
-          <span class="btn-ico"><i class="fas fa-dog"></i></span>
-          <span class="btn-text">Animaux autorisés</span>
+        <button type="button" class="filtres__button">
+          <span class="filtres__icon"><i class="fas fa-dog"></i></span>
+          <span class="filtres__txt">Animaux autorisés</span>
         </button>
 
-        <div class="info">
-          <span class="info-ico"><i class="fas fa-info"></i></span>
-          <span class="info-txt"
+        <div class="filtres--info">
+          <span class="filtres--info__icon info-ico"><i class="fas fa-info"></i></span>
+          <span class="filtres--info__txt info-txt"
             >Plus de 500 logements sont disponibles dans cette ville</span
           >
         </div>
@@ -98,16 +98,16 @@
 
       <!-- les plus populaires section -->
 
-      <section class="sec-populaires h-padding v-padding">
-        <div class="title-pop-container">
-          <h2 class="title-pop">les plus populaires</h2>
-          <span class="pop-ico"><i class="fas fa-chart-line"></i></span>
+      <section class="populaire h-padding v-padding">
+        <div class="populaire__title">
+          <h2>les plus populaires</h2>
+          <span class="populaire__icon"><i class="fas fa-chart-line"></i></span>
         </div>
 
-        <div class="pop-results">
-          <figure class="pop-result shadow">
+        <div class="populaire__container">
+          <figure class="populaire__card shadow">
             <img
-              class="pop-result-img"
+              class="populaire__image"
               src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
               alt="un lit queen size dans une chambre au mur vert"
               srcset="
@@ -116,10 +116,10 @@
                 ./images/hebergements/1_xlarge/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg
               "
             />
-            <figcaption class="pop-result-caption">
-              <h4 class="result-title">Hôtel le soleil du matin</h4>
-              <span class="pop-result-price">Nuit à partir de 128€</span>
-              <div class="result-notation">
+            <figcaption class="populaire__description">
+              <h4 class="description__title">Hôtel le soleil du matin</h4>
+              <span class="description__price">Nuit à partir de 128€</span>
+              <div class="description__notation">
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
@@ -129,9 +129,9 @@
             </figcaption>
           </figure>
 
-          <figure class="pop-result shadow">
+          <figure class="populaire__card shadow">
             <img
-              class="pop-result-img"
+              class="populaire__image"
               src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
               alt="lit queen size dans une chambre claire aux tonalités beiges"
               srcset="
@@ -140,24 +140,24 @@
                 ./images/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg
               "
             />
-            <figcaption class="pop-result-caption">
-              <h4 class="pop-result-title">
+            <figcaption class="populaire__description">
+              <h4 class="description__title">
                 Au coeur de l'eau Chambre d'hôtes
               </h4>
-              <span class="pop-result-price">Nuit à partir de 71€</span>
-              <div class="result-notation">
+              <span class="description__price">Nuit à partir de 71€</span>
+              <div class="description__notation">
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
-                <span class="star-grey"><i class="fas fa-star"></i></span>
+                <span class="description__notation__grey-star"><i class="fas fa-star"></i></span>
               </div>
             </figcaption>
           </figure>
 
-          <figure class="pop-result shadow">
+          <figure class="populaire__card shadow">
             <img
-              class="pop-result-img"
+              class="populaire__image"
               src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
               alt="chambre familiale avec un lit double et un lit simple"
               srcset="
@@ -166,15 +166,15 @@
                 ./images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg
               "
             />
-            <figcaption class="pop-result-caption">
-              <h4 class="result-title">Hôtel tout bleu et blanc</h4>
-              <span class="pop-result-price">Nuit à partir de 68€</span>
-              <div class="result-notation">
+            <figcaption class="populaire__description">
+              <h4 class="description__title">Hôtel tout bleu et blanc</h4>
+              <span class="description__price">Nuit à partir de 68€</span>
+              <div class="description__notation">
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
-                <span class="star-grey"><i class="fas fa-star"></i></span>
+                <span class="description__notation__grey-star"><i class="fas fa-star"></i></span>
               </div>
             </figcaption>
           </figure>
@@ -182,15 +182,15 @@
       </section>
 
       <!-- section hebergements -->
-      <section id="anchor-heb" class="sec-heb h-padding v-padding">
-        <div class="title-pop-container">
-          <h2 class="title-heb">Hébergements à Marseilles</h2>
+      <section id="anchor-heb" class="hebergement h-padding v-padding">
+        <div>
+          <h2>Hébergements à Marseilles</h2>
         </div>
 
-        <div class="pop-results">
-          <figure class="heb-result shadow">
+        <div class="hebergement__container">
+          <figure class="hebergement__card shadow">
             <img
-              class="heb-result-img"
+              class="hebergement__image"
               src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
               alt="chambre avec lits superposés"
               srcset="
@@ -199,22 +199,22 @@
                 ./images/hebergements/1_xlarge/marcus-loke-WQJvWU_HZFo-unsplash.jpg
               "
             />
-            <figcaption class="heb-result-caption">
-              <h4 class="result-title">Auberge la Cannebière</h4>
-              <span class="pop-result-price">Nuit à partir de 25€</span>
-              <div class="result-notation">
+            <figcaption class="hebergement__description">
+              <h4 class="description__title">Auberge la Cannebière</h4>
+              <span class="description__price">Nuit à partir de 25€</span>
+              <div class="description__notation">
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
-                <span class="star-grey"><i class="fas fa-star"></i></span>
+                <span class="description__notation__grey-star"><i class="fas fa-star"></i></span>
               </div>
             </figcaption>
           </figure>
 
-          <figure class="heb-result shadow">
+          <figure class="hebergement__card shadow">
             <img
-              class="heb-result-img"
+              class="hebergement__image"
               src="./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
               alt="chambre avec lits superposés"
               srcset="
@@ -223,10 +223,10 @@
                 ./images/hebergements/1_xlarge/fred-kleber-gTbaxaVLvsg-unsplash.jpg
               "
             />
-            <figcaption class="heb-result-caption">
-              <h4 class="result-title">Hôtel du port</h4>
-              <span class="pop-result-price">Nuit à partir de 52€</span>
-              <div class="result-notation">
+            <figcaption class="hebergement__description">
+              <h4 class="description__title">Hôtel du port</h4>
+              <span class="description__price">Nuit à partir de 52€</span>
+              <div class="description__notation">
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
@@ -236,9 +236,9 @@
             </figcaption>
           </figure>
 
-          <figure class="heb-result shadow">
+          <figure class="hebergement__card shadow">
             <img
-              class="heb-result-img"
+              class="hebergement__image"
               src="./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
               alt="chambre avec lits superposés"
               srcset="
@@ -247,22 +247,22 @@
                 ./images/hebergements/1_xlarge/reisetopia-B8WIgxA_PFU-unsplash.jpg
               "
             />
-            <figcaption class="heb-result-caption">
-              <h4 class="result-title">Hôtel les mouettes</h4>
-              <span class="pop-result-price">Nuit à partir de 76€</span>
-              <div class="result-notation">
+            <figcaption class="hebergement__description">
+              <h4 class="description__title">Hôtel les mouettes</h4>
+              <span class="description__price">Nuit à partir de 76€</span>
+              <div class="description__notation">
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
-                <span class="star-grey"><i class="fas fa-star"></i></span>
+                <span class="description__notation__grey-star"><i class="fas fa-star"></i></span>
               </div>
             </figcaption>
           </figure>
 
-          <figure class="heb-result shadow">
+          <figure class="hebergement__card shadow">
             <img
-              class="heb-result-img"
+              class="hebergement__image"
               src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
               alt="chambre avec lits superposés"
               srcset="
@@ -271,22 +271,22 @@
                 ./images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg
               "
             />
-            <figcaption class="heb-result-caption">
-              <h4 class="result-title">Hôtel de la mer</h4>
-              <span class="pop-result-price">Nuit à partir de 46€</span>
-              <div class="result-notation">
+            <figcaption class="hebergement__description">
+              <h4 class="description__title">Hôtel de la mer</h4>
+              <span class="description__price">Nuit à partir de 46€</span>
+              <div class="description__notation">
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
-                <span class="star-grey"><i class="fas fa-star"></i></span>
-                <span class="star-grey"><i class="fas fa-star"></i></span>
+                <span class="description__notation__grey-star"><i class="fas fa-star"></i></span>
+                <span class="description__notation__grey-star"><i class="fas fa-star"></i></span>
               </div>
             </figcaption>
           </figure>
 
-          <figure class="heb-result shadow">
+          <figure class="hebergement__card shadow">
             <img
-              class="heb-result-img"
+              class="hebergement__image"
               src="./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
               alt="chambre avec lits superposés"
               srcset="
@@ -295,22 +295,22 @@
                 ./images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg
               "
             />
-            <figcaption class="heb-result-caption">
-              <h4 class="result-title">Auberge le Panier</h4>
-              <span class="pop-result-price">Nuit à partir de 23€</span>
-              <div class="result-notation">
+            <figcaption class="hebergement__description">
+              <h4 class="description__title">Auberge le Panier</h4>
+              <span class="description__price">Nuit à partir de 23€</span>
+              <div class="description__notation">
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
-                <span class="star-grey"><i class="fas fa-star"></i></span>
+                <span class="description__notation__grey-star"><i class="fas fa-star"></i></span>
               </div>
             </figcaption>
           </figure>
 
-          <figure class="heb-result shadow">
+          <figure class="hebergement__card shadow">
             <img
-              class="heb-result-img"
+              class="hebergement__image"
               src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
               alt="chambre avec lits superposés"
               srcset="
@@ -319,10 +319,10 @@
                 ./images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg
               "
             />
-            <figcaption class="heb-result-caption">
-              <h4 class="result-title">Hôtel chez Amina</h4>
-              <span class="pop-result-price">Nuit à partir de 96€</span>
-              <div class="result-notation">
+            <figcaption class="hebergement__description">
+              <h4 class="description__title">Hôtel chez Amina</h4>
+              <span class="description__price">Nuit à partir de 96€</span>
+              <div class="description__notation">
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
@@ -336,15 +336,15 @@
       </section>
 
       <!-- section activitees -->
-      <section id="anchor-act" class="sec-act h-padding v-padding">
-        <div class="title-act-container">
-          <h2 class="title-act">Activitées à Marseilles</h2>
+      <section id="anchor-act" class="activite h-padding v-padding">
+        <div>
+          <h2>Activitées à Marseilles</h2>
         </div>
 
-        <div class="pop-results">
-          <figure class="act-result shadow">
+        <div class="activite__container">
+          <figure class="activite__card shadow">
             <img
-              class="act-result-img"
+              class="activite__image"
               src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
               alt="chambre avec lits superposés"
               srcset="
@@ -353,14 +353,14 @@
                 ./images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg
               "
             />
-            <figcaption class="act-result-caption">
-              <h4 class="result-title">Vieux port</h4>
+            <figcaption class="activite__description">
+              <h4 class="description__title">Vieux port</h4>
             </figcaption>
           </figure>
 
-          <figure class="act-result shadow">
+          <figure class="activite__card shadow">
             <img
-              class="act-result-img"
+              class="activite__image"
               src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
               alt="for"
               srcset="
@@ -369,14 +369,14 @@
                 ./images/activites/1_xlarge/paul-hermann-QFTrLdQIRhI-unsplash.jpg
               "
             />
-            <figcaption class="act-result-caption">
-              <h4 class="result-title">Fort de Pomègues</h4>
+            <figcaption class="activite__description">
+              <h4 class="description__title">Fort de Pomègues</h4>
             </figcaption>
           </figure>
 
-          <figure class="act-result shadow">
+          <figure class="activite__card shadow">
             <img
-              class="act-result-img"
+              class="activite__image"
               src="./images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
               alt="chambre avec lits superposés"
               srcset="
@@ -385,14 +385,14 @@
                 ./images/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg
               "
             />
-            <figcaption class="act-result-caption">
-              <h4 class="result-title">Iles de Frioul</h4>
+            <figcaption class="activite__description">
+              <h4 class="description__title">Iles de Frioul</h4>
             </figcaption>
           </figure>
 
-          <figure class="act-result shadow">
+          <figure class="activite__card shadow">
             <img
-              class="act-result-img"
+              class="activite__image"
               src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
               alt="chambre avec lits superposés"
               srcset="
@@ -401,14 +401,14 @@
                 ./images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg
               "
             />
-            <figcaption class="act-result-caption">
-              <h4 class="result-title">Parc National des Calanques</h4>
+            <figcaption class="activite__description">
+              <h4 class="description__title">Parc National des Calanques</h4>
             </figcaption>
           </figure>
 
-          <figure class="act-result shadow">
+          <figure class="activite__card shadow">
             <img
-              class="act-result-img"
+              class="activite__image"
               src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
               alt="chambre avec lits superposés"
               srcset="
@@ -417,14 +417,14 @@
                 ./images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg
               "
             />
-            <figcaption class="act-result-caption">
-              <h4 class="result-title">Notre-Dame-de-la-Garde</h4>
+            <figcaption class="activite__description">
+              <h4 class="description__title">Notre-Dame-de-la-Garde</h4>
             </figcaption>
           </figure>
 
-          <figure class="act-result shadow">
+          <figure class="activite__card shadow">
             <img
-              class="act-result-img"
+              class="activite__image"
               src="./images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
               alt="chambre avec lits superposés"
               srcset="
@@ -433,8 +433,8 @@
                 ./images/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg
               "
             />
-            <figcaption class="act-result-caption">
-              <h4 class="result-title">Parc Longchamp</h4>
+            <figcaption class="activite__description">
+              <h4 class="description__title">Parc Longchamp</h4>
             </figcaption>
           </figure>
         </div>
