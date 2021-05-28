@@ -346,5 +346,68 @@ footer ul{
 }
 
 
-/* ***************** for screen from 768px ********************** */
+/* ***************** for screen from 576px ********************** */
+@media screen and (min-width: 576px) {
+    
+    .heb-result{
+        height: 300px;
+    }
+    
+    .heb-result .result-notation {
+        margin-top: 30px;
+    } 
+}
+
+/* ***************** for screen from 778px ********************** */
+@media screen and (min-width: 778px) {
+    
+    .navigation {
+        padding-top: 30px;
+        margin-right: 20px;
+        width: initial;
+    }
+
+ 
+
+    .navigation-list {
+        border-bottom: initial;
+        padding-left: 40px;
+    }
+
+    .btn-inscrire {
+        order: initial;
+        position: initial;
+        right: initial;
+        top: initial;
+        color: #0065FC;
+        font-weight: 600;
+        padding: 0 20px 0 40px;
+    }
+
+    .btn-search {
+        margin: initial;
+        margin-top: 25px;
+        justify-content: start;
+        width: 50%;
+        margin-bottom: 25px;
+    }
+
+    .input-text {
+        width: 100%;
+    }
+
+    .pop-results {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .pop-result {
+        width: 49%;
+    }
+
+    .result-notation{
+        margin-top: 50px;
+    }
+}
 
