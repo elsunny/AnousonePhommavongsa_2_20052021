@@ -1,7 +1,7 @@
 /* Les couleurs de la charte sont le bleu #0065FC, et sa version plus claire #DEEBFF ainsi que le gris pour le fond #F2F2F2.
 La police du site est Raleway. */
 
-/* for screen from 0px to 768px */
+/* ******************* for screen from 320px to 576px *********************** */
 
 *{
     /* border: solid 1px black; */
@@ -44,6 +44,10 @@ a:link{
 a:visited{
     color: black;
     
+}
+
+.container{
+    width: 100%;
 }
 
 /* header logo style */
@@ -239,16 +243,26 @@ header{
     padding: 7px;
 }
 
+.pop-result{
+    /* max-width: 460px;
+    width: 334px; 
+    width: 100%;
+    min-width: 132px; */
+    height: 140px;
+}
 
 .pop-result-img{
-    width: 132px;
-    height: 135px;;
+    width: 40%;
+    min-width: 125px;
+    height: 100%;
     border-radius: 10px 0 0 10px;
     object-fit: cover;
 }
 
 
 .pop-result-caption{
+    width: 60%;
+    min-width: 120px;
     padding-left: 20px;
 }
 
@@ -262,7 +276,7 @@ header{
 }
 
 .result-notation{
-    margin-top: 40px;
+    margin-top: 30px;
     color: #0065FC;
 }
 
@@ -274,17 +288,30 @@ header{
 
 .heb-result, .act-result{
     flex-direction: column;
+    height: 200px;
+}
+
+.heb-result-img{
+    height: 60%;
 }
 
 .heb-result-img, .act-result-img{
-    width: 322px;
-    /* width: 100%; */
-    height: 114px;
+    height: 60%;
     border-radius: 10px 10px 0 0;
     object-fit: cover;
 }
 
+.heb-result .result-notation {
+    margin-top: 5px;
+}
 
+.act-result-img{
+    height: 75%;
+}
+
+.sec-act{
+    margin-bottom: 60px;
+}
 
 /* shadow */
 
@@ -298,7 +325,7 @@ header{
     padding-top: 10px;
 }
 
-/* section activitees */
+
 
 
 footer{
@@ -317,3 +344,7 @@ footer li{
 footer ul{
     margin-bottom: 30px;
 }
+
+
+/* ***************** for screen from 768px ********************** */
+
