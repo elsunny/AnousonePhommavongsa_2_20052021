@@ -1,7 +1,7 @@
 /* Les couleurs de la charte sont le bleu #0065FC, et sa version plus claire #DEEBFF ainsi que le gris pour le fond #F2F2F2.
 La police du site est Raleway. */
 
-/* for screen from 0px to 768px */
+/* ******************* for screen from 320px to 576px *********************** */
 
 *{
     /* border: solid 1px black; */
@@ -13,49 +13,74 @@ La police du site est Raleway. */
     /* border: solid 1px black; */
 }
 
-input, textarea, button{
-    font-family: inherit;
-    font-size: inherit;
-}
-
 body{
     font-size: 15px;
     font-weight: 400;
 }
 
+.h-padding{
+    padding: 0 20px;
+}
+
+.v-padding{
+    padding-top: 33px;
+}
+
+h2{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a:link{
+    text-decoration: none;
+    color: #0065FC;
+    font-weight: 700;
+}
+
+a:visited{
+    color: black;
+    
+}
+
+.container{
+    width: 100%;
+}
+
 /* header logo style */
 
-.logo-container{
-    padding: 20px 20px 0 20px;
+header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     position: relative;
 }
 
-.btn-inscrire{
-    border: none;
-    background: none;
-    color: #0065FC;
-    position: absolute;
-    top: 40px;
-    Right: 20px;
-    font-weight: 600;
-}
+
+
 
 /* navigation style */
 
-.title{
-        padding: 0 20px;
+.navigation{
+    width: 100%;
+}
+
+.btn-inscrire{
+    order: -1;
+    position: absolute;
+    right: 20px;
+    top: 54px;
+    color: #0065FC;
+    font-weight: 600;
 }
 
 .navigation-lists{
     display: flex;
-    list-style-type: none;
     padding-top: 20px;
-
-    
-    
 }
 
 .navigation-list{
@@ -63,27 +88,9 @@ body{
     flex: 1 1 0;
     text-align: center;
     padding-bottom: 10px;
-    
-}
-
-.navigation-lists li:nth-child(1){
-    border-bottom: solid 2.5px #0065FC;
-    color: #0065FC;
 }
 
 /* search section */
-
-.section-search{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-h2{
-    padding: 20px 0px 10px 0px;
-    font-weight: 700;
-}
 
 .btn-search{
     margin: 25px auto;
@@ -100,7 +107,7 @@ h2{
     width: 100%;
     border: none;
     line-height: 30px;
-    padding: 7px 15px;
+    padding: 5px 15px;
     font-weight: 600;
     
 }
@@ -115,7 +122,13 @@ h2{
 }
 
 .ico-markup{
-    width: 55px;
+    background: #F2F2F2;
+    border-radius: 10px 0 0 10px;
+    height: 40px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ico-search{
@@ -123,7 +136,7 @@ h2{
     color: white;
     border-radius: 10px;
     height: 40px;
-    width: 50px;
+    width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,15 +144,14 @@ h2{
 
 /* filtres section */
 
-.filtres{
+.sec-filtres{
         margin: auto;
         margin-bottom: 50px;
         display: flex;
         flex-wrap: wrap;
-        padding: 0 20px;
 }
 
-.title-filtres{
+.title{
     width: 100%;
     margin-bottom: 25px;
 }
@@ -201,10 +213,11 @@ h2{
 
 /* section populaires */
 
-.pop-container {
-    margin: auto;
-    padding: 0 20px;
+
+
+.sec-populaires{
     background: #F2F2F2;
+    padding-bottom: 50px;
 }
 
 .title-pop-container{
@@ -212,15 +225,189 @@ h2{
     justify-content: space-between;
     align-items: center;
     position: relative;
+    margin-bottom: 20px;
 }
 
-.title-pop {
-    padding: 25px 0 0px 0px;
-}
+
 
 .pop-ico i{
     font-size: 23px;
-    position: absolute;
-    top: 29px;
-    right: 20px;
+    
 }
+/* card setup */
+.pop-result, .heb-result, .act-result{
+    margin-bottom: 10px;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+.pop-result{
+    /* max-width: 460px;
+    width: 334px; 
+    width: 100%;
+    min-width: 132px; */
+    height: 140px;
+}
+
+.pop-result-img{
+    width: 40%;
+    min-width: 125px;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+}
+
+
+.pop-result-caption{
+    width: 60%;
+    min-width: 120px;
+    padding-left: 20px;
+}
+
+.pop-result-price{
+    font-size: 0.8rem;
+}
+
+.result-title{
+    padding-top: 15px;
+    font-weight: 900;
+}
+
+.result-notation{
+    margin-top: 30px;
+    color: #0065FC;
+}
+
+.star-grey{
+    color: lightgray;
+}
+
+/* section hebergements */
+
+.heb-result, .act-result{
+    flex-direction: column;
+    height: 200px;
+}
+
+.heb-result-img{
+    height: 60%;
+}
+
+.heb-result-img, .act-result-img{
+    height: 60%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.heb-result .result-notation {
+    margin-top: 5px;
+}
+
+.act-result-img{
+    height: 75%;
+}
+
+.sec-act{
+    margin-bottom: 60px;
+}
+
+/* shadow */
+
+.shadow{
+    
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+.pop-results h3{
+    padding-top: 10px;
+}
+
+
+
+
+footer{
+    background-color: #F2F2F2;
+    overflow: hidden;
+}
+
+footer h3{
+    padding-bottom: 10px;
+}
+
+footer li{
+    padding-bottom: 5px;;
+}
+
+footer ul{
+    margin-bottom: 30px;
+}
+
+
+/* ***************** for screen from 576px ********************** */
+@media screen and (min-width: 576px) {
+    
+    .heb-result{
+        height: 300px;
+    }
+    
+    .heb-result .result-notation {
+        margin-top: 30px;
+    } 
+}
+
+/* ***************** for screen from 778px ********************** */
+@media screen and (min-width: 778px) {
+    
+    .navigation {
+        padding-top: 30px;
+        margin-right: 20px;
+        width: initial;
+    }
+
+ 
+
+    .navigation-list {
+        border-bottom: initial;
+        padding-left: 40px;
+    }
+
+    .btn-inscrire {
+        order: initial;
+        position: initial;
+        right: initial;
+        top: initial;
+        color: #0065FC;
+        font-weight: 600;
+        padding: 0 20px 0 40px;
+    }
+
+    .btn-search {
+        margin: initial;
+        margin-top: 25px;
+        justify-content: start;
+        width: 50%;
+        margin-bottom: 25px;
+    }
+
+    .input-text {
+        width: 100%;
+    }
+
+    .pop-results {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .pop-result {
+        width: 49%;
+    }
+
+    .result-notation{
+        margin-top: 50px;
+    }
+}
+
