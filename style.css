@@ -22,14 +22,14 @@ body {
 	padding: 0 20px;
 }
 
-.v-padding {
+/* .v-padding {
 	padding-top: 20px;
-}
+} */
 
 h2 {
 	font-weight: 700;
-	margin-bottom: 20px;
-	margin-top: 20px;
+	margin-bottom: 26px;
+	margin-top: 40px;
 }
 
 ul {
@@ -39,7 +39,7 @@ ul {
 a:link {
 	text-decoration: none;
 	color: #0065FC;
-	font-weight: 700;
+	font-weight: 400;
 }
 
 a:visited {
@@ -56,6 +56,7 @@ header {
 	align-items: center;
 	flex-wrap: wrap;
 	position: relative;
+	padding-top: 30px;
 }
 
 .navigation {
@@ -66,27 +67,28 @@ header {
 	order: -1;
 	position: absolute;
 	right: 20px;
-	top: 43px;
+	top: 51px;
 	color: #0065FC;
 	font-weight: 600;
 }
 
 .navigation__list {
 	display: flex;
-	padding-top: 20px;
+	padding-top: 40px;
 }
 
 .navigation__list__item {
 	border-bottom: solid 1px lightgray;
 	flex: 1 1 0;
 	text-align: center;
-	padding-bottom: 10px;
+	padding-bottom: 15px;
+	/* font-weight: 400; */
 }
 
     /* search section */
 
 .search__button {
-	margin: 25px auto;
+	/* margin: 37px auto; */
 	border: solid 0.1px rgba(211, 211, 211, 0.3);
 	border-radius: 10px;
 	overflow: hidden;
@@ -94,13 +96,14 @@ header {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	margin-top: 37px;
 }
 
 .search__button__input {
 	width: 100%;
 	border: none;
-	line-height: 30px;
-	padding: 5px 15px;
+	line-height: 49px;
+	padding: 0px 15px;
 	font-weight: 600;
 }
 
@@ -116,7 +119,7 @@ header {
 .search__button--markup {
 	background: #F2F2F2;
 	border-radius: 10px 0 0 10px;
-	height: 40px;
+	height: 49px;
 	width: 60px;
 	display: flex;
 	justify-content: center;
@@ -127,7 +130,7 @@ header {
 	background: #0065FC;
 	color: white;
 	border-radius: 10px;
-	height: 40px;
+	height: 49px;
 	width: 60px;
 	display: flex;
 	justify-content: center;
@@ -139,7 +142,7 @@ header {
 
 .filtres {
 	margin: auto;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -147,7 +150,9 @@ header {
 .title {
 	width: 100%;
 	/* margin-bottom: 25px; */
-	padding: 20px 0;
+	/* padding: 20px 0; */
+	padding-top: 35px;
+	padding-bottom: 15px;
 }
 
 .filtres__button {
@@ -155,8 +160,8 @@ header {
 	border-radius: 20px;
 	font-weight: 700;
 	border: solid 0.1px rgba(211, 211, 211, 0.5);
-	margin: 0 5px 20px 0;
-	height: 40px;
+	margin: 0 5px 15px 0;
+	height: 45px;
 	overflow: hidden;
 	display: flex;
 	align-items: center;
@@ -166,8 +171,8 @@ header {
 .filtres__icon {
 	background: #DEEBFF;
 	border-radius: 50%;
-	width: 38px;
-	height: 38px;
+	width: 45px;
+	height: 45px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -179,11 +184,12 @@ header {
 }
 
 .filtres__txt {
-	padding: 0 16px;
+	padding: 0 15px;
 }
 
 .filtres--info {
 	display: flex;
+	padding-top: 10px;
 }
 
 .filtres--info__icon {
@@ -319,8 +325,8 @@ header {
 footer {
 	background-color: #F2F2F2;
 	overflow: hidden;
-    padding-top: 40px;
-    padding-bottom: 40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
 footer h3 {
@@ -336,6 +342,9 @@ footer ul {
 	margin-bottom: 30px;
 }
 
+.footer__propos{
+	padding-top: 40px;
+}
 
 /* ***************** for screen from 576px ********************** */
 
