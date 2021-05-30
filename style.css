@@ -60,8 +60,26 @@ a{
 } */
 
 .main {
-	width: 100%;
+	/* width: 100%; */
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas:
+		"header header header header"
+		"search search search search"
+		"filtres filtres filtres filtres"
+		"populaire populaire populaire populaire"
+		"hebergement hebergement hebergement hebergement"
+		"footer footer footer footer"
+
 }
+
+header			{grid-area: header;}
+.search			{grid-area: search;}
+.filtres		{grid-area: filtres;}
+.populaire		{grid-area: populaire;}
+.hebergement	{grid-area: hebergement;}
+.activite		{grid-area: activite;}
+footer			{grid-area: footer;}
 
 header {
 	display: flex;
@@ -106,7 +124,6 @@ header {
     /* search section */
 
 .search__button {
-	/* margin: 37px auto; */
 	border: solid 0.1px rgba(211, 211, 211, 0.3);
 	border-radius: 10px;
 	overflow: hidden;
@@ -114,6 +131,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	max-width: ;
 	margin-top: 37px;
 }
 
@@ -365,63 +383,5 @@ footer ul {
 	padding-top: 40px;
 }
 
-/* ***************** for screen from 576px ********************** */
-
-@media screen and (min-width: 576px) {
-	.hebergement__card {
-		height: 300px;
-	}
-	.hebergement__card .description__notation {
-		margin-top: 30px;
-	}
-}
-
-
-/* ***************** for screen from 778px ********************** */
-
-@media screen and (min-width: 778px) {
-	.navigation {
-		padding-top: 30px;
-		margin-right: 20px;
-		width: initial;
-	}
-	.navigation-list {
-		border-bottom: initial;
-		padding-left: 40px;
-		cursor: pointer;
-	}
-
-	
-
-	.navigation__list__item--inscrire {
-		order: initial;
-		position: initial;
-		right: initial;
-		top: initial;
-		color: #0065FC;
-		font-weight: 600;
-		padding: 0 20px 0 40px;
-	}
-	.btn-search {
-		margin: initial;
-		margin-top: 25px;
-		justify-content: start;
-		width: 50%;
-		margin-bottom: 25px;
-	}
-	.search__button__input {
-		width: 100%;
-	}
-	.populaire__container {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-	}
-	.pop-result {
-		width: 49%;
-	}
-	.description__notation {
-		margin-top: 50px;
-	}
-}
+/* ***************** for desktop screen from 1280px ************* */
 
