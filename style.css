@@ -4,6 +4,13 @@ La police du site est Raleway. */
 
 /* ******************* for screen from 320px to 576px *********************** */
 
+:root{
+	--one-clr: #0065FC;
+	--two-clr: #DEEBFF;
+	--three-clr: #F2F2F2;
+	--txt-clr: black;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -36,15 +43,21 @@ ul {
 	list-style-type: none;
 }
 
-a:link {
+a{
 	text-decoration: none;
-	color: #0065FC;
+	color: var(--txt-clr);
 	font-weight: 400;
 }
 
-a:visited {
+/* a:link {
+	text-decoration: none;
+	color: #0065FC;
+	font-weight: 400;
+} */
+
+/* a:visited {
 	color: black;
-}
+} */
 
 .main {
 	width: 100%;
@@ -68,7 +81,7 @@ header {
 	position: absolute;
 	right: 20px;
 	top: 51px;
-	color: #0065FC;
+	color: var(--one-clr);
 	font-weight: 600;
 }
 
@@ -77,12 +90,17 @@ header {
 	padding-top: 40px;
 }
 
-.navigation__list__item {
-	border-bottom: solid 1px lightgray;
+.navigation__list__item--hebergement, .navigation__list__item--activite {
+	border-bottom: solid 1px var(--three-clr);
 	flex: 1 1 0;
 	text-align: center;
 	padding-bottom: 15px;
 	/* font-weight: 400; */
+}
+
+.navigation__list__item--hebergement:visited {
+	color: red; 
+	border-bottom: solid 1px red;
 }
 
     /* search section */
@@ -108,7 +126,7 @@ header {
 }
 
 ::placeholder {
-	color: black;
+	color: var(--txt-clr);
 	opacity: 1;
 }
 
@@ -117,7 +135,7 @@ header {
 }
 
 .search__button--markup {
-	background: #F2F2F2;
+	background: var(--two-clr);
 	border-radius: 10px 0 0 10px;
 	height: 49px;
 	width: 60px;
@@ -127,7 +145,7 @@ header {
 }
 
 .search__button--loupe {
-	background: #0065FC;
+	background: var(--one-clr);
 	color: white;
 	border-radius: 10px;
 	height: 49px;
@@ -156,7 +174,7 @@ header {
 }
 
 .filtres__button {
-	background: white;
+	background: none;
 	border-radius: 20px;
 	font-weight: 700;
 	border: solid 0.1px rgba(211, 211, 211, 0.5);
@@ -169,7 +187,7 @@ header {
 }
 
 .filtres__icon {
-	background: #DEEBFF;
+	background: var(--two-clr);
 	border-radius: 50%;
 	width: 45px;
 	height: 45px;
@@ -180,7 +198,7 @@ header {
 
 .filtres__icon i {
 	font-size: 15px;
-	color: #0065FC;
+	color: var(--one-clr);
 }
 
 .filtres__txt {
@@ -193,7 +211,7 @@ header {
 }
 
 .filtres--info__icon {
-	border: solid 1px lightgray;
+	border: solid 1px var(--three-clr);
 	border-radius: 50%;
 	display: flex;
 	width: 30px;
@@ -204,7 +222,7 @@ header {
 
 .filtres--info__icon i {
 	font-size: 10px;
-	color: #0065FC;
+	color: var(--one-clr);
 }
 
 .filtres--info__txt {
@@ -215,7 +233,7 @@ header {
 /* section populaires */
 
 .populaire {
-	background: #F2F2F2;
+	background: var(--three-clr);
 	padding-bottom: 50px;
 }
 
@@ -242,6 +260,7 @@ header {
 	background: white;
 	border-radius: 10px;
 	padding: 7px;
+	max-width: 21rem;
 }
 
 /* section populaire */
@@ -252,7 +271,6 @@ header {
 
 .populaire__image {
 	width: 40%;
-	min-width: 125px;
 	height: 100%;
 	border-radius: 10px 0 0 10px;
 	object-fit: cover;
@@ -275,11 +293,11 @@ header {
 
 .description__notation {
 	margin-top: 38px;
-	color: #0065FC;
+	color: var(--one-clr);
 }
 
 .description__notation__grey-star {
-	color: lightgray;
+	color: var(--three-clr);
 }
 
 
@@ -300,6 +318,7 @@ header {
 	height: 60%;
 	border-radius: 10px 10px 0 0;
 	object-fit: cover;
+	object-position: 50% 60%;
 }
 
 .hebergement__card .description__notation {
@@ -323,7 +342,7 @@ header {
 }
 
 footer {
-	background-color: #F2F2F2;
+	background-color: var(--three-clr);
 	overflow: hidden;
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -369,7 +388,11 @@ footer ul {
 	.navigation-list {
 		border-bottom: initial;
 		padding-left: 40px;
+		cursor: pointer;
 	}
+
+	
+
 	.navigation__list__item--inscrire {
 		order: initial;
 		position: initial;
