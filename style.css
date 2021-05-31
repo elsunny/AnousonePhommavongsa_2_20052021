@@ -29,10 +29,6 @@ body {
 	padding: 0 20px;
 }
 
-/* .v-padding {
-	padding-top: 20px;
-} */
-
 h2 {
 	font-weight: 700;
 	margin-bottom: 26px;
@@ -63,12 +59,14 @@ a{
 	/* width: 100%; */
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	/* grid-template-rows: repeat(7, 1fr); */
 	grid-template-areas:
 		"header header header header"
 		"search search search search"
 		"filtres filtres filtres filtres"
 		"populaire populaire populaire populaire"
 		"hebergement hebergement hebergement hebergement"
+		"activite activite activite activite"
 		"footer footer footer footer"
 
 }
@@ -385,3 +383,98 @@ footer ul {
 
 /* ***************** for desktop screen from 1280px ************* */
 
+@media (min-width: 1200px){
+	.main {
+		grid-template-areas:
+			"header header header header"
+			"search search search search"
+			"filtres filtres filtres filtres"
+			"hebergement hebergement hebergement populaire"
+			"hebergement hebergement hebergement populaire"
+			"hebergement hebergement hebergement populaire"
+			"activite activite activite activite"
+			"footer footer footer footer"
+	}
+
+	header {
+		flex-wrap: initial; 
+		position: initial;
+	}
+
+	.navigation__list {
+		justify-content: flex-end;
+	}
+
+	.navigation__list__item--inscrire {
+		order: initial;
+		position: initial;
+		right: initial;
+		top: initial;
+	}
+
+	.navigation__list__item--activite, .navigation__list__item--hebergement, .navigation__list__item--inscrire {
+		padding-right: 75px;
+	}
+
+	.navigation__list__item--hebergement, .navigation__list__item--activite {
+		flex: initial;
+	}
+
+	.search__button {
+		max-width: 30%;
+	}
+
+	.populaire {
+		border-radius: 20px;
+	}
+
+	.hebergement {
+		background: var(--three-clr);
+		max-width: 95%;
+		margin: 0 auto;
+		border-radius: 20px;
+	}
+
+	.hebergement__container {
+		
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.activite__container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 200px);
+		grid-template-areas: 
+			"vieux-port pomegues calanques notre-dame"
+			"vieux-port frioul calanques longchamp"
+		;
+
+	}
+
+	#vieux-port{ grid-area: vieux-port; }
+	#pomegues{ grid-area: pomegues; }
+	#frioul{ grid-area: frioul; }
+	#calanques{ grid-area: notre-dame; }
+	#longchamp{ grid-area: longchamp; } 
+
+	.hebergement__card,
+	.activite__card {
+		flex-direction: column;
+		height: 192px;
+		min-width: 31%;
+	}
+
+	
+
+	footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.footer__propos {
+		padding-top: initial;
+	}
+}
