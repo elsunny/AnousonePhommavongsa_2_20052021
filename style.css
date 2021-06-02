@@ -630,3 +630,68 @@ footer ul {
 		display: initial;
 	}
 }
+
+ /* ****************** layout for screen from 600px ********************** */
+
+ @media (min-width: 768px){
+	.main {
+		/*max-width: 1400px;*/
+		grid-template-areas:
+			"header header header header"
+			"search search search search"
+			"filtres filtres filtres filtres"
+			"hebergement hebergement hebergement populaire"
+			"hebergement hebergement hebergement populaire"
+			"hebergement hebergement hebergement populaire"
+			"activite activite activite activite"
+			"footer footer footer footer"
+
+			
+	
+	}
+		
+
+	.hebergement__card {
+		width: 48%;
+		justify-content:space-between;
+	}
+
+	.hebergement__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.populaire__title h2 {
+		display: none;
+	}
+
+	.populaire__icon i::after {
+		content: ' Populaires';
+
+	}
+
+	.populaire__title {
+		padding: 41px 0 27px;
+	}
+
+	.populaire__card {
+		flex-direction: column;
+		height: 11rem;
+	}
+
+	.populaire__image {
+		    height: 53%;
+		    width: 100%;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+            object-position: 50% 60%;
+	}
+
+	.populaire__description {
+		width: initial
+	}
+
+	.description__notation {
+		margin-top: initial;
+	}
