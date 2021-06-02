@@ -11,18 +11,19 @@ La police du site est Raleway. */
 	--txt-clr: black;
 }
 
-* {
+*, *::before, *::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Raleway', sans-serif;
-	letter-spacing: 0.3px;
+	
 	/* border: solid 1px black; */
 }
 
 body {
 	font-size: 15px;
 	font-weight: 400;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 0.3px;
 }
 
 .h-padding {
@@ -103,20 +104,70 @@ header {
 .navigation__list {
 	display: flex;
 	padding-top: 40px;
+	
 }
 
 .navigation__list__item--hebergement, .navigation__list__item--activite {
-	border-bottom: solid 1px var(--three-clr);
 	flex: 1 1 0;
 	text-align: center;
 	padding-bottom: 15px;
 	/* font-weight: 400; */
 }
 
-.navigation__list__item--hebergement:visited {
-	color: red; 
-	border-bottom: solid 1px red;
+.navigation__list a:hover {
+	color: var(--one-clr); 
 }
+
+.navigation__list__item--hebergement a::before {
+	content: '';
+    height: 2px;
+    width: 1rem;
+    background: var(--one-clr);
+    display: block;
+    position: absolute;
+    top: 0;
+    margin-left: -2rem;
+	opacity: 0;
+	transition: 300ms all ease-in-out;
+}
+
+.navigation__list__item--hebergement a:hover::before {
+	content: '';
+    height: 2px;
+    width: 11rem;
+    background: var(--one-clr);
+    display: block;
+    position: absolute;
+    top: 0;
+    margin-left: -2rem;
+	opacity: 1;
+}
+
+.navigation__list__item--activite a::before {
+	content: '';
+    height: 2px;
+    width: 1rem;
+    background: var(--one-clr);
+    display: block;
+    position: absolute;
+    top: 0;
+    margin-left: -2rem;
+	opacity: 0;
+	transition: 300ms all ease-in-out;
+}
+
+.navigation__list__item--activite a:hover::before {
+	content: '';
+    height: 2px;
+    width: 7rem;
+    background: var(--one-clr);
+    display: block;
+    position: absolute;
+    top: 0;
+    margin-left: -2rem;
+	opacity: 1;
+}
+
 
     /* search section */
 
@@ -170,6 +221,20 @@ header {
 	align-items: center;
 }
 
+.search__button--recherchez {
+	background: var(--one-clr);
+	color: white;
+	border-radius: 0 10px 10px 0;
+	height: 49px;
+	width: 80%;
+	align-items: center;
+	display: none;
+	text-align: center;
+	line-height: 49px;
+	font-weight: 500;
+	font-size: 1rem; 
+}
+
 
 /* filtres section */
 
@@ -199,6 +264,7 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	cursor: pointer;
 }
 
 .filtres__icon {
@@ -209,6 +275,10 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+	/* outline: red; */
+	margin-left: -1px;
+	/* z-index: 100; */
 }
 
 .filtres__icon i {
@@ -218,6 +288,19 @@ header {
 
 .filtres__txt {
 	padding: 0 15px;
+}
+
+.filtres__button:hover .filtres__icon {
+	background: var(--one-clr);
+}
+
+.filtres__button:hover .filtres__icon i{
+	color: var(--two-clr);
+}
+
+.filtres__button:hover {
+	color: var(--one-clr); 
+	border-color: var(--one-clr);
 }
 
 .filtres--info {
@@ -276,6 +359,7 @@ header {
 	border-radius: 10px;
 	padding: 7px;
 	max-width: 21rem;
+	cursor: pointer;
 }
 
 /* section populaire */
@@ -322,6 +406,7 @@ header {
 .activite__card {
 	flex-direction: column;
 	height: 192px;
+	cursor: pointer;
 }
 
 .hebergement__image {
@@ -354,6 +439,36 @@ header {
 .shadow {
 	/* offset-x | offset-y | blur-radius | spread-radius | color */
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.hebergement__container:hover >* {
+	opacity: 0.5;
+	transition: 300ms all ease;
+}
+
+.hebergement__container:hover > *:hover {
+	opacity: 1;
+	transform: scale(1.05, 1.05);
+}
+
+.activite__container:hover >* {
+	opacity: 0.5;
+	transition: 300ms all ease;
+}
+
+.activite__container:hover > *:hover {
+	opacity: 1;
+	transform: scale(1.05, 1.05);
+}
+
+.populaire__container:hover >* {
+	opacity: 0.5;
+	transition: 300ms all ease;
+}
+
+.populaire__container:hover > *:hover {
+	opacity: 1;
+	transform: scale(1.05, 1.05);
 }
 
 footer {
@@ -505,5 +620,13 @@ footer ul {
 
 	.filtres--info {
 		width: 100%;
+	}
+
+	.search__button--loupe {
+		display: none;
+	}
+
+	.search__button--recherchez {
+		display: initial;
 	}
 }
