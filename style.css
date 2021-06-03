@@ -49,7 +49,8 @@ a{
 .main {
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 30%;
+	grid-gap: 5px;
+	grid-template-columns: 1fr 1fr 1fr 35%;
 	grid-template-areas:
 		"header header header header"
 		"search search search search"
@@ -101,62 +102,59 @@ header {
 	flex: 1 1 0;
 	text-align: center;
 	padding-bottom: 15px;
+	position: relative;
 }
 
 .navigation__list a:hover {
 	color: var(--one-clr); 
 }
 
-.navigation__list__item--hebergement a::before {
+/* menu line on top of item */
+.navigation__list__item--hebergement a::after {
 	content: '';
-    height: 2px;
-    width: 1rem;
-    background: var(--one-clr);
-    display: block;
-    position: absolute;
-    top: 0;
-    margin-left: -2rem;
-	opacity: 0;
+	height: 2px;
+	width: 100%;
+	background: var(--three-clr);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: 1;
 	transition: 300ms all ease-in-out;
 }
 
-.navigation__list__item--hebergement a:hover::before {
+.navigation__list__item--hebergement a:hover::after {
 	content: '';
     height: 2px;
-    width: 11rem;
+    width: 100%;
     background: var(--one-clr);
-    display: block;
     position: absolute;
-    top: 0;
-    margin-left: -2rem;
+	bottom: 0;
+	left: 0;
 	opacity: 1;
 }
 
-.navigation__list__item--activite a::before {
+.navigation__list__item--activite a::after {
 	content: '';
-    height: 2px;
-    width: 1rem;
-    background: var(--one-clr);
-    display: block;
-    position: absolute;
-    top: 0;
-    margin-left: -2rem;
-	opacity: 0;
+	height: 2px;
+	width: 100%;
+	background: var(--three-clr);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: 1;
 	transition: 300ms all ease-in-out;
 }
 
-.navigation__list__item--activite a:hover::before {
+.navigation__list__item--activite a:hover::after {
 	content: '';
     height: 2px;
-    width: 7rem;
+    width: 100%;
     background: var(--one-clr);
-    display: block;
     position: absolute;
-    top: 0;
-    margin-left: -2rem;
+	bottom: 0;
+	left: 0;
 	opacity: 1;
 }
-
 
 /* search section */
 
@@ -345,6 +343,7 @@ header {
 	max-width: 100%;
 	cursor: pointer;
 	overflow: hidden;
+
 }
 
 /* section populaire */
@@ -377,6 +376,7 @@ header {
 .description__notation {
 	margin-top: 38px;
 	color: var(--one-clr);
+
 }
 
 .description__notation__grey-star {
@@ -492,9 +492,9 @@ footer ul {
 		height: 300px;
 	}
  }
- /* ****************** layout for screen from 800px ************************************* */
+ /* ****************** layout for screen from 768px ************************************* */
 
- @media all and (min-width: 800px){
+ @media all and (min-width: 768px){
 	.main {
 		grid-template-areas:
 			"header header header header"
@@ -506,29 +506,57 @@ footer ul {
 			"activite activite activite activite"
 			"footer footer footer footer"
 	}
+
+
+
+	
+	/* menu positionning */
+	
 	header {
 		flex-wrap: initial; 
 		position: initial;
 	}
 
+	.navigation {
+		width: 50%;
+	}
+
 	.navigation__list {
-		justify-content: flex-end;
+		padding-right: 20px;
+	}
+
+	.navigation__list__item--hebergement, .navigation__list__item--activite, .navigation__list__item--inscrire {
+		flex: 1 1 0;
+		text-align: right;
+		padding-bottom: 15px;
+		position: relative;
 	}
 
 	.navigation__list__item--inscrire {
 		order: initial;
 		position: initial;
-		right: initial;
-		top: initial;
 	}
 
-	.navigation__list__item--activite, .navigation__list__item--hebergement, .navigation__list__item--inscrire {
+	
+		/* menu line on top of item */
+
+	.navigation__list__item--hebergement a::after {
+		display: none;
+	}
+
+	.navigation__list__item--activite a::after {
+		display: none;
+	}
+
+	
+
+	/* .navigation__list__item--activite, .navigation__list__item--hebergement, .navigation__list__item--inscrire {
 		padding-right: 75px;
 	}
 
 	.navigation__list__item--hebergement, .navigation__list__item--activite {
 		flex: initial;
-	}	
+	}	 */
 
 	.search__button {
 		width: 50%;
@@ -546,8 +574,13 @@ footer ul {
 		width: 100%;
 	}
 
+	.hebergement {
+		background: linear-gradient(var(--three-clr), white);
+		border-radius: 20px;
+	}
+
 	.hebergement__card {
-		width: 48%;
+		width: 90%;
 		justify-content:space-between;
 	}
 
@@ -555,6 +588,12 @@ footer ul {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		
+	}
+
+	.populaire {
+		border-radius: 20px;
+		background: linear-gradient(var(--three-clr), white);
 	}
 
 	.populaire__title h2 {
@@ -592,28 +631,41 @@ footer ul {
 	}
 
 	.activite__container {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-gap: 25px;
+		grid-template-areas: 
+			"vieux-port pomegues calanques calanques"
+			"frioul frioul longchamp notre-dame"
+		;
+
 	}
 
+	#vieux-port{ grid-area: vieux-port; }
+	#pomegues{ grid-area: pomegues; }
+	#frioul{ grid-area: frioul; }
+	#notre-dame{ grid-area: notre-dame; }
+	#calanques{ grid-area: calanques; }
+	#longchamp{ grid-area: longchamp; } 
+
 	.activite__card {
-		width: 32%;
+		width: 100%;
 	}
 
 	footer {
 		display: flex;
 		align-items: center;
-		justify-content: space-around;
+		justify-content: space-between;
 	}
-
-	footer div {
+	
+	footer div, .footer__propos {
 		padding: 50px 0 25px;
 		width: 30%;
 		height: 100%;
 	}
 
-/* **************************** for desktop screen from 1280px ************************ */
+/* **************************** for desktop screen from 1200px ************************ */
 
 @media all and (min-width: 1200px){
 	.main {
@@ -661,7 +713,7 @@ footer ul {
 		justify-content: space-between;
 	}
 
-	.activite__container {
+	/* .activite__container {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(2, 1fr);
@@ -678,7 +730,7 @@ footer ul {
 	#frioul{ grid-area: frioul; }
 	#notre-dame{ grid-area: notre-dame; }
 	#calanques{ grid-area: calanques; }
-	#longchamp{ grid-area: longchamp; } 
+	#longchamp{ grid-area: longchamp; }  */
 
 	#vieux-port, #calanques {
 		min-height: 98%;
@@ -686,6 +738,10 @@ footer ul {
 
 	.hebergement__card {
 		max-width: 32%;
+	}
+
+	.populaire {
+		background: var(--three-clr);
 	}
 
 	.populaire__title h2 {
