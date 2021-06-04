@@ -166,7 +166,6 @@ header {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	max-width: ;
 	margin-top: 37px;
 	cursor: pointer;
 }
@@ -780,25 +779,12 @@ footer ul {
 	.populaire__description .description__notation {
 		position: absolute;
 		bottom: 5px;
-	} */
+	} 
 
-	/* .hebergement {
-		background: var(--three-clr);
-		max-width: 95%;
-		margin: 0 auto;
-		border-radius: 20px;
-	} */
-
-	/* .hebergement__container {
-		
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	} */
-
-	figure.hebergement__card {
+	.hebergement__card {
 		width: 32%;
 		height: 200px;
+		
 	}
 
 	.hebergement__image {
@@ -821,25 +807,28 @@ footer ul {
 
 
 	#vieux-port, #calanques {
-		height: 440px;
+		height: 100%;
+		display: block;
 	}
 
 	#pomegues, #longchamp {
-		height: 50%;
+		height: 100%;
 	}
 
 	#frioul, #notre-dame {
-		height: 35%;
+		height: 70%;
 	}
 
 	#frioul {
-		margin-top: -219px;
+		margin-top: auto;
 	}
 
 	#longchamp {
-		margin-top: -290px;
+		
 	}
-
+	.activite__container {
+		height: 440px;
+	}
 	.activite__card {
 		padding: initial;
 		width: 100%;
@@ -863,5 +852,6 @@ footer ul {
 		color: var(--one-clr);
 	}
 
-	
+}	
 
+ }
