@@ -2,13 +2,15 @@
 La police du site est Raleway. */
 
 
-/* *************************** for screen from 320px *********************************** */
+/* ////////////////////////// for screen from 320px ////////////////////////////////////*/
 
 :root{
 	--one-clr: #0065FC;
 	--two-clr: #DEEBFF;
 	--three-clr: #F2F2F2;
 	--txt-clr: black;
+
+	--lr-pad: 
 }
 
 *, *::before, *::after {
@@ -19,20 +21,22 @@ La police du site est Raleway. */
 }
 
 body {
-	font-size: 15px;
-	font-weight: 400;
+	/* font-size: 15px; */
+	/* font-weight: 400; */
 	font-family: 'Raleway', sans-serif;
 	letter-spacing: 0.3px;
 }
 
-.h-padding {
+/* .h-padding {
 	padding: 0 20px;
-}
+} */
 
 h2 {
 	font-weight: 700;
-	margin-bottom: 26px;
-	margin-top: 40px;
+	/* margin-bottom: 26px;
+	margin-top: 40px; */
+	margin-bottom: 1.2rem;
+	margin-top: 2rem;
 }
 
 ul {
@@ -45,8 +49,9 @@ a{
 	font-weight: 400;
 }
 
-/* grid layout for the main page */
+/* ********************** grid layout for the main page *************************** */
 .main {
+	/* padding: 0 1rem; */
 	margin: 0 auto;
 	display: grid;
 	grid-gap: 5px;
@@ -69,47 +74,54 @@ header			{grid-area: header;}
 .activite		{grid-area: activite;}
 footer			{grid-area: footer;}
 
-/* menu navigation */
+
+
+/******************************** logo et menu **************************************/
+
 header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	position: relative;
-	padding-top: 30px;
+	/* padding: 0 1rem; */
+	/* position: relative; */
+}
+
+.logo {
+	padding-top: 1rem;
+	padding-left: 0.5rem;
 }
 
 .navigation {
 	width: 100%;
 }
 
+.navigation__list {
+	display: flex;
+}
+
 .navigation__list__item--inscrire {
 	order: -1;
 	position: absolute;
-	right: 20px;
-	top: 51px;
+	right: 1rem;
+	top: 3rem;
 	color: var(--one-clr);
 	font-weight: 600;
-}
-
-.navigation__list {
-	display: flex;
-	padding-top: 40px;
-	
 }
 
 .navigation__list__item--hebergement, .navigation__list__item--activite {
 	flex: 1 1 0;
 	text-align: center;
-	padding-bottom: 15px;
+	padding-bottom: 1rem;
 	position: relative;
+	padding-top: 2rem;
 }
 
 .navigation__list a:hover {
 	color: var(--one-clr); 
 }
 
-/* menu line on top of item */
+/* line under the menu */
 .navigation__list__item--hebergement a::after {
 	content: '';
 	height: 2px;
@@ -156,7 +168,11 @@ header {
 	opacity: 1;
 }
 
-/* search section */
+/* ************************* search section *********************** */
+
+.search {
+	padding: 0 1rem;
+}
 
 .search__button {
 	border: solid 0.1px rgba(211, 211, 211, 0.3);
@@ -166,15 +182,14 @@ header {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	max-width: ;
-	margin-top: 37px;
+	margin-top: 2rem;
+	cursor: pointer;
 }
 
 .search__button__input {
 	width: 100%;
 	border: none;
-	line-height: 49px;
-	padding: 0px 15px;
+	padding: 0px 1rem;
 	font-weight: 600;
 }
 
@@ -223,9 +238,10 @@ header {
 }
 
 
-/* filtres section */
+/* *********************** filtres section *************************** */
 
 .filtres {
+	padding: 0 1rem;
 	margin: auto;
 	margin-bottom: 40px;
 	display: flex;
@@ -311,12 +327,15 @@ header {
 }
 
 
-/* section populaires */
+/* ******************** section populaires ************************* */
 
 .populaire {
+	padding: 0 1rem;
 	background: var(--three-clr);
 	padding-bottom: 50px;
 }
+
+
 
 .populaire__title {
 	display: flex;
@@ -325,12 +344,17 @@ header {
 	position: relative;
 }
 
+.populaire__icon {
+	position: absolute;
+	top: 35px;
+	right: 5px;
+}
+
 .populaire__icon i {
 	font-size: 23px;
 }
 
 
-/* card setup */
 
 .populaire__card,
 .hebergement__card,
@@ -346,7 +370,6 @@ header {
 
 }
 
-/* section populaire */
 
 .populaire__card {
 	height: 140px;
@@ -384,7 +407,11 @@ header {
 }
 
 
-/* section hebergements */
+/* ***************** section hebergements ************************** */
+
+.hebergement {
+	padding: 0 1rem;
+}
 
 .hebergement__card,
 .activite__card {
@@ -409,16 +436,21 @@ header {
 	margin-top: 5px;
 }
 
+/* **************** section activite ****************** */
+
+.activite {
+	margin-bottom: 60px;
+	padding: 0 1rem;
+}
+
 .activite__image {
 	height: 75%;
 }
 
-.activite {
-	margin-bottom: 60px;
-}
 
 
-/* shadow */
+
+/* *************** shadow & card on hover *****************/
 
 .shadow {
 	/* offset-x | offset-y | blur-radius | spread-radius | color */
@@ -457,12 +489,13 @@ header {
 }
 
 
-/* footer */
+/* ****************************** footer ******************************* */
 footer {
 	background-color: var(--three-clr);
 	overflow: hidden;
 	padding-top: 40px;
 	padding-bottom: 40px;
+	padding: 0 1rem;
 }
 
 footer h3 {
@@ -482,7 +515,8 @@ footer ul {
 	padding-top: 40px;
 }
 
- /* ****************** layout for screen from 450px ************************************* */
+ /* ////////////////////// layout for screen from 450px ////////////////////////////// */
+ 
  @media all and (min-width: 450px) {
  	.populaire__card {
     	height: 160px;
@@ -492,17 +526,17 @@ footer ul {
 		height: 300px;
 	}
  }
- /* ****************** layout for screen from 768px ************************************* */
+ /* //////////////////// layout for screen from 768px //////////////////////////////// */
 
  @media all and (min-width: 768px){
 	.main {
+		padding: 0 1rem;
 		grid-template-areas:
 			"header header header header"
 			"search search search search"
 			"filtres filtres filtres filtres"
-			"hebergement hebergement hebergement populaire"
-			"hebergement hebergement hebergement populaire"
-			"hebergement hebergement hebergement populaire"
+			"populaire populaire populaire populaire"
+			"hebergement hebergement hebergement hebergement"
 			"activite activite activite activite"
 			"footer footer footer footer"
 	}
@@ -518,11 +552,18 @@ footer ul {
 	}
 
 	.navigation {
-		width: 50%;
+		width: 51%;
 	}
 
 	.navigation__list {
 		padding-right: 20px;
+		width: 25rem;
+	}
+
+	.navigation__list li {
+		text-align: center;
+		padding-top: 44px;
+		border-top: solid 2px white;
 	}
 
 	.navigation__list__item--hebergement, .navigation__list__item--activite, .navigation__list__item--inscrire {
@@ -535,6 +576,7 @@ footer ul {
 	.navigation__list__item--inscrire {
 		order: initial;
 		position: initial;
+		padding-top: 40px;
 	}
 
 	
@@ -548,15 +590,20 @@ footer ul {
 		display: none;
 	}
 
+	.navigation__list >li:hover {
+		border-top: solid 2px var(--one-clr);
 	
-
-	/* .navigation__list__item--activite, .navigation__list__item--hebergement, .navigation__list__item--inscrire {
-		padding-right: 75px;
 	}
 
-	.navigation__list__item--hebergement, .navigation__list__item--activite {
-		flex: initial;
-	}	 */
+	
+
+	/* .navigation__list__item--hebergement, .navigation__list__item--activite{
+		border-top: solid 1px red;
+		padding-top: 40px;
+		border: solid 1px black;
+		text-align: center;
+	} */
+
 
 	.search__button {
 		width: 50%;
@@ -575,59 +622,81 @@ footer ul {
 	}
 
 	.hebergement {
-		background: linear-gradient(var(--three-clr), white);
+		background: var(--three-clr);
 		border-radius: 20px;
-	}
-
-	.hebergement__card {
-		width: 90%;
-		justify-content:space-between;
+		width: 100%;
+		margin: 0 auto;
+		
 	}
 
 	.hebergement__container {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		
 	}
+
+	.hebergement__card {
+		width: 47%;
+		height: 230px;
+		justify-content:space-between;
+		margin-bottom: 20px;
+	}
+
+	.hebergement__image {
+		height: 68%;
+	}
+
+	
 
 	.populaire {
 		border-radius: 20px;
-		background: linear-gradient(var(--three-clr), white);
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 2rem;;
 	}
 
-	.populaire__title h2 {
-		display: none;
+	.populaire__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
-	.populaire__icon i::after {
-		content: ' Populaires';
-
-	}
-
-	.populaire__title {
-		padding: 41px 0 27px;
+	.populaire__icon {
+		padding-top: 13px;
 	}
 
 	.populaire__card {
-		flex-direction: column;
-		height: 11rem;
+		flex-direction: initial;
+		height: 160px;
+		width: 32%;
+	}
+	
+	.populaire__image {
+		width: 40%;
+		height: 100%;
+		border-radius: 10px 0 0 10px;
+		object-fit: cover;
 	}
 
-	.populaire__image {
-		    height: 53%;
-		    width: 100%;
-            border-radius: 10px 10px 0 0;
-            object-fit: cover;
-            object-position: 50% 60%;
+	.populaire__title h2 {
+		display: initial;
+	}
+
+	.populaire__icon i::after {
+		content: initial;
 	}
 
 	.populaire__description {
-		width: initial
+		position: relative;
 	}
 
-	.description__notation {
-		margin-top: initial;
+	.populaire__title {
+		padding: initial;
+	}
+
+	.populaire__description .description__notation {
+		position: absolute;
+		bottom: 5px;
 	}
 
 	.activite__container {
@@ -681,6 +750,10 @@ footer ul {
 			"footer footer footer footer"
 	}
 
+	.navigation {
+		width: 32%;
+	}
+
 	.search__button--recherchez {
 		width: 35%;
 	} 
@@ -690,19 +763,24 @@ footer ul {
 		padding-bottom: 20px;
 	}
 
-	.populaire {
+	.populaire__container {
+		flex-direction: column;
+		align-items: center;
+	}
+	/* .populaire {
 		border-radius: 20px;
 		margin-right: 20px;
 		background: var(--three-clr);
-	}
+	} */
 
-	.populaire__icon {
+	/* .populaire__icon {
 		padding-top: 13px;
-	}
+	} */
 
-	.populaire__card {
+   	.populaire__card {
 		flex-direction: initial;
 		height: 140px;
+		width: 90%;
 	}
 	
 	.populaire__image {
@@ -731,37 +809,25 @@ footer ul {
 	.populaire__description .description__notation {
 		position: absolute;
 		bottom: 5px;
-	}
-
-	.hebergement {
-		background: var(--three-clr);
-		max-width: 95%;
-		margin: 0 auto;
-		border-radius: 20px;
-	}
-
-	.hebergement__container {
-		
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
+	} 
 
 	.hebergement__card {
-		max-width: 32%;
+		width: 32%;
 		height: 200px;
+		
 	}
 
-	.activite__card {
-		padding: initial;
-		width: 100%;
+	.hebergement__image {
+		height: 60%;
 	}
 
-	/* .activite__container {
-		display: grid;
+	
+
+	.activite__container {
+		/* display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(2, 1fr);
-		grid-gap: 25px;
+		grid-gap: 25px; */
 		grid-template-areas: 
 			"vieux-port pomegues calanques notre-dame"
 			"vieux-port frioul calanques longchamp"
@@ -769,20 +835,52 @@ footer ul {
 
 	}
 
-	#vieux-port{ grid-area: vieux-port; }
-	#pomegues{ grid-area: pomegues; }
-	#frioul{ grid-area: frioul; }
-	#notre-dame{ grid-area: notre-dame; }
-	#calanques{ grid-area: calanques; }
-	#longchamp{ grid-area: longchamp; }  */
 
 	#vieux-port, #calanques {
-		min-height: 98%;
+		height: 100%;
 	}
 
+	#pomegues, #longchamp {
+		height: 100%;
+	}
+
+	#frioul, #notre-dame {
+		height: 70%;
+	}
+
+	#frioul {
+		margin-top: auto;
+	}
+
+	#longchamp {
+		
+	}
+	.activite__container {
+		height: 440px;
+	}
+	.activite__card {
+		padding: initial;
+		width: 100%;
+	}
+
+	#vieux-port .activite__image {
+		height: 89%;
+	}
+
+	#calanques .activite__image {
+		height: 89%;
+	}
+
+	.search__button:hover >.search__button--recherchez {
+		
+		
+	}
 	
+	.search__button:hover ::placeholder{
+		
+		color: var(--one-clr);
+	}
 
+}	
 
-	
-}
-
+ }
