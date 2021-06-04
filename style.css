@@ -25,9 +25,9 @@ body {
 	letter-spacing: 0.3px;
 }
 
-.h-padding {
+/* .h-padding {
 	padding: 0 20px;
-}
+} */
 
 h2 {
 	font-weight: 700;
@@ -47,6 +47,7 @@ a{
 
 /* grid layout for the main page */
 .main {
+	padding: 0 20px;
 	margin: 0 auto;
 	display: grid;
 	grid-gap: 5px;
@@ -597,7 +598,7 @@ footer ul {
 	.hebergement {
 		background: var(--three-clr);
 		border-radius: 20px;
-		width: 95%;
+		width: 100%;
 		margin: 0 auto;
 		
 	}
@@ -623,9 +624,7 @@ footer ul {
 
 	.populaire {
 		border-radius: 20px;
-		/* margin-right: 20px; */
-		background: var(--three-clr);
-		width: 95%;
+		width: 100%;
 		margin: 0 auto;
 	}
 
@@ -808,7 +807,6 @@ footer ul {
 
 	#vieux-port, #calanques {
 		height: 100%;
-		display: block;
 	}
 
 	#pomegues, #longchamp {
