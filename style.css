@@ -2,13 +2,15 @@
 La police du site est Raleway. */
 
 
-/* *************************** for screen from 320px *********************************** */
+/* ////////////////////////// for screen from 320px ////////////////////////////////////*/
 
 :root{
 	--one-clr: #0065FC;
 	--two-clr: #DEEBFF;
 	--three-clr: #F2F2F2;
 	--txt-clr: black;
+
+	--lr-pad: 
 }
 
 *, *::before, *::after {
@@ -19,8 +21,8 @@ La police du site est Raleway. */
 }
 
 body {
-	font-size: 15px;
-	font-weight: 400;
+	/* font-size: 15px; */
+	/* font-weight: 400; */
 	font-family: 'Raleway', sans-serif;
 	letter-spacing: 0.3px;
 }
@@ -31,8 +33,10 @@ body {
 
 h2 {
 	font-weight: 700;
-	margin-bottom: 26px;
-	margin-top: 40px;
+	/* margin-bottom: 26px;
+	margin-top: 40px; */
+	margin-bottom: 1.2rem;
+	margin-top: 2rem;
 }
 
 ul {
@@ -45,9 +49,9 @@ a{
 	font-weight: 400;
 }
 
-/* grid layout for the main page */
+/* ********************** grid layout for the main page *************************** */
 .main {
-	padding: 0 20px;
+	/* padding: 0 1rem; */
 	margin: 0 auto;
 	display: grid;
 	grid-gap: 5px;
@@ -70,47 +74,54 @@ header			{grid-area: header;}
 .activite		{grid-area: activite;}
 footer			{grid-area: footer;}
 
-/* menu navigation */
+
+
+/******************************** logo et menu **************************************/
+
 header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	position: relative;
-	padding-top: 30px;
+	/* padding: 0 1rem; */
+	/* position: relative; */
+}
+
+.logo {
+	padding-top: 1rem;
+	padding-left: 0.5rem;
 }
 
 .navigation {
 	width: 100%;
 }
 
+.navigation__list {
+	display: flex;
+}
+
 .navigation__list__item--inscrire {
 	order: -1;
 	position: absolute;
-	right: 20px;
-	top: 51px;
+	right: 1rem;
+	top: 3rem;
 	color: var(--one-clr);
 	font-weight: 600;
-}
-
-.navigation__list {
-	display: flex;
-	padding-top: 40px;
-	
 }
 
 .navigation__list__item--hebergement, .navigation__list__item--activite {
 	flex: 1 1 0;
 	text-align: center;
-	padding-bottom: 15px;
+	padding-bottom: 1rem;
 	position: relative;
+	padding-top: 2rem;
 }
 
 .navigation__list a:hover {
 	color: var(--one-clr); 
 }
 
-/* menu line on top of item */
+/* line under the menu */
 .navigation__list__item--hebergement a::after {
 	content: '';
 	height: 2px;
@@ -157,7 +168,11 @@ header {
 	opacity: 1;
 }
 
-/* search section */
+/* ************************* search section *********************** */
+
+.search {
+	padding: 0 1rem;
+}
 
 .search__button {
 	border: solid 0.1px rgba(211, 211, 211, 0.3);
@@ -167,15 +182,14 @@ header {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	margin-top: 37px;
+	margin-top: 2rem;
 	cursor: pointer;
 }
 
 .search__button__input {
 	width: 100%;
 	border: none;
-	line-height: 49px;
-	padding: 0px 15px;
+	padding: 0px 1rem;
 	font-weight: 600;
 }
 
@@ -224,9 +238,10 @@ header {
 }
 
 
-/* filtres section */
+/* *********************** filtres section *************************** */
 
 .filtres {
+	padding: 0 1rem;
 	margin: auto;
 	margin-bottom: 40px;
 	display: flex;
@@ -312,12 +327,15 @@ header {
 }
 
 
-/* section populaires */
+/* ******************** section populaires ************************* */
 
 .populaire {
+	padding: 0 1rem;
 	background: var(--three-clr);
 	padding-bottom: 50px;
 }
+
+
 
 .populaire__title {
 	display: flex;
@@ -326,12 +344,17 @@ header {
 	position: relative;
 }
 
+.populaire__icon {
+	position: absolute;
+	top: 35px;
+	right: 5px;
+}
+
 .populaire__icon i {
 	font-size: 23px;
 }
 
 
-/* card setup */
 
 .populaire__card,
 .hebergement__card,
@@ -347,7 +370,6 @@ header {
 
 }
 
-/* section populaire */
 
 .populaire__card {
 	height: 140px;
@@ -385,7 +407,11 @@ header {
 }
 
 
-/* section hebergements */
+/* ***************** section hebergements ************************** */
+
+.hebergement {
+	padding: 0 1rem;
+}
 
 .hebergement__card,
 .activite__card {
@@ -410,16 +436,21 @@ header {
 	margin-top: 5px;
 }
 
+/* **************** section activite ****************** */
+
+.activite {
+	margin-bottom: 60px;
+	padding: 0 1rem;
+}
+
 .activite__image {
 	height: 75%;
 }
 
-.activite {
-	margin-bottom: 60px;
-}
 
 
-/* shadow */
+
+/* *************** shadow & card on hover *****************/
 
 .shadow {
 	/* offset-x | offset-y | blur-radius | spread-radius | color */
@@ -458,12 +489,13 @@ header {
 }
 
 
-/* footer */
+/* ****************************** footer ******************************* */
 footer {
 	background-color: var(--three-clr);
 	overflow: hidden;
 	padding-top: 40px;
 	padding-bottom: 40px;
+	padding: 0 1rem;
 }
 
 footer h3 {
@@ -518,11 +550,18 @@ footer ul {
 	}
 
 	.navigation {
-		width: 50%;
+		width: 32%;
 	}
 
 	.navigation__list {
 		padding-right: 20px;
+		width: 25rem;
+	}
+
+	.navigation__list li {
+		text-align: center;
+		padding-top: 44px;
+		border-top: solid 2px white;
 	}
 
 	.navigation__list__item--hebergement, .navigation__list__item--activite, .navigation__list__item--inscrire {
@@ -535,6 +574,7 @@ footer ul {
 	.navigation__list__item--inscrire {
 		order: initial;
 		position: initial;
+		padding-top: 40px;
 	}
 
 	
@@ -548,36 +588,20 @@ footer ul {
 		display: none;
 	}
 
-	.navigation__list__item--hebergement a {
-		border-top: solid 5px red;
-		display: block;
-	}
-
-	/* .navigation__list__item--hebergement {
-		border: solid 1px green;
-		position: initial;
-	}
-
-	.navigation__list__item--hebergement a::before {
-		content: '';
-		display: block;
-		height: 5px;
-		width: 50%;
-		background: var(--one-clr);
-		opacity: 1;
-		transition: 300ms all ease-in-out;
-	}
+	.navigation__list >li:hover {
+		border-top: solid 2px var(--one-clr);
 	
-	.navigation__list__item--hebergement a:hover::before {
-		content: '';
-		height: 2px;
-		width: 100%;
-		background: var(--one-clr);
-		position: absolute;
-		top: 0;
-		left: 0;
-		opacity: 1;
+	}
+
+	
+
+	/* .navigation__list__item--hebergement, .navigation__list__item--activite{
+		border-top: solid 1px red;
+		padding-top: 40px;
+		border: solid 1px black;
+		text-align: center;
 	} */
+
 
 	.search__button {
 		width: 50%;
