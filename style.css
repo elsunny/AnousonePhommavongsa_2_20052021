@@ -344,6 +344,10 @@ header {
 	position: relative;
 }
 
+.populaire__link {
+	display: block;
+}
+
 .populaire__icon {
 	position: absolute;
 	top: 35px;
@@ -595,15 +599,8 @@ footer ul {
 	
 	}
 
-	
 
-	/* .navigation__list__item--hebergement, .navigation__list__item--activite{
-		border-top: solid 1px red;
-		padding-top: 40px;
-		border: solid 1px black;
-		text-align: center;
-	} */
-
+	/* search section */
 
 	.search__button {
 		width: 50%;
@@ -621,6 +618,8 @@ footer ul {
 		width: 100%;
 	}
 
+	/* hebergement section */
+	
 	.hebergement {
 		background: var(--three-clr);
 		border-radius: 20px;
@@ -635,8 +634,13 @@ footer ul {
 		justify-content: space-between;
 	}
 
-	.hebergement__card {
+	.hebergement__link {
+		display: block;
 		width: 47%;
+	}
+
+	.hebergement__card {
+		width: 100%;
 		height: 230px;
 		justify-content:space-between;
 		margin-bottom: 20px;
@@ -647,6 +651,7 @@ footer ul {
 	}
 
 	
+	/* populaire */
 
 	.populaire {
 		border-radius: 20px;
@@ -661,14 +666,20 @@ footer ul {
 		justify-content: space-between;
 	}
 
+	.populaire__link {
+		display: block;
+		width: 49%;
+	}
+
 	.populaire__icon {
 		padding-top: 13px;
+		top: 26px;
 	}
 
 	.populaire__card {
 		flex-direction: initial;
 		height: 160px;
-		width: 32%;
+		width: 100%;
 	}
 	
 	.populaire__image {
@@ -704,22 +715,42 @@ footer ul {
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 		grid-gap: 25px;
-		grid-template-areas: 
+		/* grid-template-areas: 
 			"vieux-port pomegues calanques calanques"
 			"frioul frioul longchamp notre-dame"
-		;
+		; */
 
 	}
 
-	#vieux-port{ grid-area: vieux-port; }
+	/* #vieux-port{ grid-area: vieux-port; }
 	#pomegues{ grid-area: pomegues; }
 	#frioul{ grid-area: frioul; }
 	#notre-dame{ grid-area: notre-dame; }
 	#calanques{ grid-area: calanques; }
-	#longchamp{ grid-area: longchamp; } 
+	#longchamp{ grid-area: longchamp; }  */
 
 	.activite__card {
 		width: 100%;
+	}
+
+	.activite--one {
+		grid-column: 1;
+		grid-row: 1/3;
+	}
+
+	.activite--two {
+		grid-column: 2;
+		grid-row: 2/1;
+	}
+
+	.activite--three {
+		grid-column: 2;
+		grid-row: 2/2;
+	}
+
+	.activite--four {
+		grid-column: 3;
+		grid-row: 1/3;
 	}
 
 	footer {
@@ -734,7 +765,7 @@ footer ul {
 		height: 100%;
 	}
 
-/* **************************** for desktop screen from 1200px ************************ */
+/* ////////////////////////////// for desktop screen from 1200px /////////////////////// */
 
 @media all and (min-width: 1200px){
 	.main {
@@ -767,20 +798,15 @@ footer ul {
 		flex-direction: column;
 		align-items: center;
 	}
-	/* .populaire {
-		border-radius: 20px;
-		margin-right: 20px;
-		background: var(--three-clr);
-	} */
 
-	/* .populaire__icon {
-		padding-top: 13px;
-	} */
+	.populaire__link {
+		width: 100%;
+	}
 
    	.populaire__card {
 		flex-direction: initial;
 		height: 140px;
-		width: 90%;
+		width: 100%;
 	}
 	
 	.populaire__image {
@@ -811,8 +837,14 @@ footer ul {
 		bottom: 5px;
 	} 
 
+
+	.hebergement__link {
+		/* display: block;
+		width: 32%; */
+	}
+
 	.hebergement__card {
-		width: 32%;
+		width: 100%;
 		height: 200px;
 		
 	}
@@ -871,10 +903,6 @@ footer ul {
 		height: 89%;
 	}
 
-	.search__button:hover >.search__button--recherchez {
-		
-		
-	}
 	
 	.search__button:hover ::placeholder{
 		
@@ -883,4 +911,4 @@ footer ul {
 
 }	
 
- }
+}
