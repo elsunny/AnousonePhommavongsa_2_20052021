@@ -21,20 +21,12 @@ La police du site est Raleway. */
 }
 
 body {
-	/* font-size: 15px; */
-	/* font-weight: 400; */
 	font-family: 'Raleway', sans-serif;
 	letter-spacing: 0.3px;
 }
 
-/* .h-padding {
-	padding: 0 20px;
-} */
-
 h2 {
 	font-weight: 700;
-	/* margin-bottom: 26px;
-	margin-top: 40px; */
 	margin-bottom: 1.2rem;
 	margin-top: 2rem;
 }
@@ -51,7 +43,6 @@ a{
 
 /* ********************** grid layout for the main page *************************** */
 .main {
-	/* padding: 0 1rem; */
 	margin: 0 auto;
 	display: grid;
 	grid-gap: 5px;
@@ -83,8 +74,6 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	/* padding: 0 1rem; */
-	/* position: relative; */
 }
 
 .logo {
@@ -250,7 +239,7 @@ header {
 
 .title {
 	width: 100%;
-	padding-top: 35px;
+	padding-top: 5px;
 	padding-bottom: 15px;
 }
 
@@ -657,7 +646,6 @@ footer ul {
 		border-radius: 20px;
 		width: 100%;
 		margin: 0 auto;
-		margin-bottom: 2rem;;
 	}
 
 	.populaire__container {
@@ -710,57 +698,61 @@ footer ul {
 		bottom: 5px;
 	}
 
-	.activite__container {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		grid-gap: 25px;
-		/* grid-template-areas: 
-			"vieux-port pomegues calanques calanques"
-			"frioul frioul longchamp notre-dame"
-		; */
-
+	.activite {
+		padding: initial;
 	}
 
-	/* #vieux-port{ grid-area: vieux-port; }
-	#pomegues{ grid-area: pomegues; }
-	#frioul{ grid-area: frioul; }
-	#notre-dame{ grid-area: notre-dame; }
-	#calanques{ grid-area: calanques; }
-	#longchamp{ grid-area: longchamp; }  */
+	.activite__link {
+		display: block;
+		height: 100%;
+	}
 
-	.activite__card {
-		width: 100%;
+	.activite__container {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(100px, 1fr));
+		grid-template-rows: repeat(2, 1fr);
+		grid-gap: 1rem;
 	}
 
 	.activite--one {
-		grid-column: 1;
-		grid-row: 1/3;
+		grid-column: 1/3;
+		grid-row: 1;
 	}
 
 	.activite--two {
-		grid-column: 2;
-		grid-row: 2/1;
+		grid-column: 1;
+		grid-row: 2;
 	}
 
 	.activite--three {
 		grid-column: 2;
-		grid-row: 2/2;
+		grid-row: 2;
 	}
 
 	.activite--four {
 		grid-column: 3;
-		grid-row: 1/3;
+		grid-row: 1;
+	}
+
+	.activite--five {
+		grid-column: 4;
+		grid-row: 1;
+	}
+
+	.activite--six {
+		grid-column: 3/5;
+		grid-row: 2;
 	}
 
 	footer {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: space-between;
 	}
 	
 	footer div, .footer__propos {
-		padding: 50px 0 25px;
+		padding-top: 3rem;
+		margin-bottom: 2rem;
 		width: 30%;
 		height: 100%;
 	}
@@ -839,8 +831,8 @@ footer ul {
 
 
 	.hebergement__link {
-		/* display: block;
-		width: 32%; */
+		/* display: block; */
+		width: 32%;
 	}
 
 	.hebergement__card {
@@ -852,58 +844,41 @@ footer ul {
 	.hebergement__image {
 		height: 60%;
 	}
-
-	
-
-	.activite__container {
-		/* display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		grid-gap: 25px; */
-		grid-template-areas: 
-			"vieux-port pomegues calanques notre-dame"
-			"vieux-port frioul calanques longchamp"
-		;
-
-	}
-
-
-	#vieux-port, #calanques {
-		height: 100%;
-	}
-
-	#pomegues, #longchamp {
-		height: 100%;
-	}
-
-	#frioul, #notre-dame {
-		height: 70%;
-	}
-
-	#frioul {
-		margin-top: auto;
-	}
-
-	#longchamp {
-		
-	}
-	.activite__container {
-		height: 440px;
-	}
-	.activite__card {
-		padding: initial;
+	 .activite__card {
 		width: 100%;
+		height: 100%;
 	}
 
-	#vieux-port .activite__image {
-		height: 89%;
+	.activite--one {
+		grid-column: 1;
+		grid-row: 1/3;
 	}
 
-	#calanques .activite__image {
-		height: 89%;
+	.activite--two {
+		grid-column: 2;
+		grid-row: 1/2;
 	}
 
-	
+	.activite--three {
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	.activite--four {
+		grid-column: 3;
+		grid-row: 1/3;
+	}
+
+	.activite--five {
+		grid-column: 4;
+		grid-row: 1;
+	}
+
+	.activite--six {
+		grid-column: 4;
+		grid-row: 2/3;
+	} 
+
 	.search__button:hover ::placeholder{
 		
 		color: var(--one-clr);
