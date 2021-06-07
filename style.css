@@ -8,8 +8,6 @@ La police du site est Raleway. */
   --two-clr: #deebff;
   --three-clr: #f2f2f2;
   --txt-clr: black;
-
-  --lr-pad: ;
 }
 
 *,
@@ -107,7 +105,10 @@ header {
   position: absolute;
   right: 1rem;
   top: 3rem;
-  color: var(--one-clr);
+}
+
+.navigation__list__item--inscrire a {
+	color: var(--one-clr);
   font-weight: 600;
 }
 
@@ -125,51 +126,28 @@ header {
 }
 
 /* line under the menu */
-.navigation__list__item--hebergement a::after {
-  content: "";
-  height: 2px;
-  width: 100%;
-  background: var(--three-clr);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
-  transition: 300ms all ease-in-out;
+
+.navigation__list__item--hebergement,
+.navigation__list__item--activite {
+  border-bottom: solid 1px var(--three-clr);
 }
 
-.navigation__list__item--hebergement a:hover::after {
-  content: "";
-  height: 2px;
-  width: 100%;
-  background: var(--one-clr);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
+.navigation__list__item--hebergement:hover {
+  border-bottom: solid 2px var(--one-clr);
 }
 
-.navigation__list__item--activite a::after {
-  content: "";
-  height: 2px;
-  width: 100%;
-  background: var(--three-clr);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
-  transition: 300ms all ease-in-out;
+.navigation__list__item--activite:hover {
+  border-bottom: solid 2px var(--one-clr);
 }
 
-.navigation__list__item--activite a:hover::after {
-  content: "";
-  height: 2px;
-  width: 100%;
-  background: var(--one-clr);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
+.navigation__list__item--hebergement a:visited {
+  border-bottom: solid 2px var(--one-clr);
 }
+
+.navigation__list__item--activite a:visited {
+  border-bottom: solid 2px var(--one-clr);
+}
+
 
 /* ************************* search section *********************** */
 
@@ -179,7 +157,7 @@ header {
 
 .search__button {
   border: solid 0.1px rgba(211, 211, 211, 0.3);
-  border-radius: 10px;
+  border-radius: 1rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -259,7 +237,7 @@ header {
 .filtres__button {
   background: none;
   border-radius: 20px;
-  font-weight: 700;
+  font-weight: 600;
   border: solid 0.1px rgba(211, 211, 211, 0.5);
   margin: 0 5px 15px 0;
   height: 45px;
@@ -371,7 +349,7 @@ header {
 }
 
 .activite__card {
-	padding: initial;
+  padding: initial;
 }
 
 .populaire__card {
@@ -389,16 +367,17 @@ header {
   width: 60%;
   min-width: 120px;
   padding-left: 20px;
+  padding-top: 8px;
 }
 
 .description__price {
   font-size: 0.8rem;
 }
 
-.description__title {
+/* .description__title {
   padding-top: 10px;
   padding-left: 10px;
-}
+} */
 
 .description__notation {
   margin-top: 38px;
@@ -428,25 +407,35 @@ header {
 
 .hebergement__image,
 .activite__image {
-  height: 60%;
-  border-radius: 10px 10px 0 0;
-  object-fit: cover;
-  object-position: 50% 60%;
+height: 60%;
+border-radius: 10px 10px 0 0;
+object-fit: cover;
+object-position: 50% 60%;
+}
+
+.hebergement__description {
+  padding: 10px 0 0 10px;
 }
 
 .hebergement__card .description__notation {
   margin-top: 5px;
 }
 
+
+
 /* **************** section activite ****************** */
 
 .activite {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   padding: 0 1rem;
 }
 
 .activite__image {
   height: 75%;
+}
+
+.activite__description {
+  padding: 16px 0 0 10px;
 }
 
 /* *************** shadow & card on hover *****************/
@@ -491,9 +480,7 @@ header {
 footer {
   background-color: var(--three-clr);
   overflow: hidden;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding: 0 1rem;
+  padding: 2rem 2rem;
 }
 
 footer h3 {
@@ -508,9 +495,9 @@ footer ul {
   margin-bottom: 30px;
 }
 
-.footer__propos {
+/* .footer__propos {
   padding-top: 40px;
-}
+} */
 
 /* ////////////////////// layout for screen from 450px ////////////////////////////// */
 
@@ -528,7 +515,7 @@ footer ul {
 
 @media all and (min-width: 768px) {
   .main {
-    padding: 0 1rem;
+    padding: 0 2rem;
     grid-template-areas:
       "header header header header"
       "search search search search"
@@ -574,6 +561,20 @@ footer ul {
     order: initial;
     position: initial;
     padding-top: 40px;
+  }
+  /* cancel line under menu */
+
+  .navigation__list__item--hebergement,
+  .navigation__list__item--activite {
+    border-bottom: initial;
+  }
+
+  .navigation__list__item--hebergement:hover {
+    border-bottom: initial;
+  }
+
+  .navigation__list__item--activite:hover {
+    border-bottom: initial;
   }
 
   /* menu line on top of item */
@@ -638,6 +639,8 @@ footer ul {
   .hebergement__image {
     height: 68%;
   }
+
+
 
   /* populaire */
 
@@ -724,9 +727,7 @@ footer ul {
   }
 
   .activite--three {
-    /* grid-column: 2;
-    grid-row: 2; */
-	grid-column: 3/5;
+    grid-column: 3/5;
     grid-row: 2;
   }
 
@@ -743,7 +744,6 @@ footer ul {
   .activite--six {
     grid-column: 2;
     grid-row: 2;
-	
   }
 
   .footer {
@@ -753,8 +753,9 @@ footer ul {
   }
 
   footer div {
-    padding-top: 3rem;
+    padding-top: 1rem;
     margin-bottom: 2rem;
+    margin-right: 1rem;
     width: 100%;
     height: 100%;
   }
@@ -787,8 +788,6 @@ footer ul {
       margin: initial;
       padding-bottom: 20px;
     }
-
-
 
     .populaire__container {
       flex-direction: column;
@@ -846,10 +845,10 @@ footer ul {
     .hebergement__image {
       height: 60%;
     }
+
     .activite__card {
       width: 100%;
       height: 100%;
-	 
     }
 
     .activite--one {
@@ -881,32 +880,32 @@ footer ul {
       grid-column: 4;
       grid-row: 2/3;
     }
-	
+
     .activite__link:nth-of-type(3) {
-		height: 160px;
-        margin-top: auto;
+      height: 160px;
+      margin-top: auto;
     }
 
     .activite__link:nth-of-type(5) {
-        height: 160px;
-        margin-bottom: auto;
+      height: 160px;
+      margin-bottom: auto;
     }
 
-	.activite--one .activite__image {
-		height: 91%;
-	}
+    .activite--one .activite__image {
+      height: 91%;
+    }
 
-	.activite--four .activite__image {
-		height: 91%;
-	}
+    .activite--four .activite__image {
+      height: 91%;
+    }
 
     .search__button:hover ::placeholder {
       color: var(--one-clr);
     }
 
-	.footer {
-		max-width: 1400px;
-		margin: 0 auto;
-	}
+    .footer {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
   }
 }
