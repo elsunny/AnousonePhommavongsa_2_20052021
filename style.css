@@ -8,6 +8,7 @@ La police du site est Raleway. */
   --two-clr: #deebff;
   --three-clr: #f2f2f2;
   --txt-clr: black;
+
 }
 
 *,
@@ -40,7 +41,7 @@ a {
   font-weight: 400;
 }
 
-/* ********************** grid layout for the main page *************************** */
+/* *************** main section with grid layout for the seb sections **************** */
 .main {
   margin: 0 auto;
   display: grid;
@@ -83,15 +84,14 @@ header {
 header {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   flex-wrap: wrap;
 }
 
 .logo {
-  padding-top: 1rem;
-  padding-left: 0.5rem;
+  padding: 2rem 1rem 0 1rem;
 }
 
+/* drives the hebergement & activite menu to take the full width of small screen */
 .navigation {
   width: 100%;
 }
@@ -100,6 +100,7 @@ header {
   display: flex;
 }
 
+/* place the inscrire button & style it with color */
 .navigation__list__item--inscrire {
   order: -1;
   position: absolute;
@@ -112,6 +113,7 @@ header {
   font-weight: 600;
 }
 
+/* position the hebergement & activite button in the navigation box */
 .navigation__list__item--hebergement,
 .navigation__list__item--activite {
   flex: 1 1 0;
@@ -121,12 +123,12 @@ header {
   padding-top: 2rem;
 }
 
+/* change color for the menu on hover */
 .navigation__list a:hover {
   color: var(--one-clr);
 }
 
-/* line under the menu */
-
+/* place line under the menu and change color on hover */
 .navigation__list__item--hebergement,
 .navigation__list__item--activite {
   border-bottom: solid 1px var(--three-clr);
@@ -322,10 +324,6 @@ header {
   position: relative;
 }
 
-.populaire__link {
-  display: block;
-}
-
 .populaire__icon {
   position: absolute;
   top: 35px;
@@ -334,6 +332,10 @@ header {
 
 .populaire__icon i {
   font-size: 23px;
+}
+
+.populaire__link {
+  display: block;
 }
 
 .populaire__card,
@@ -359,7 +361,7 @@ header {
 
 .populaire__image {
   width: 40%;
-  height: 100%;
+  height: auto;
   border-radius: 10px 0 0 10px;
   object-fit: cover;
 }
@@ -374,11 +376,6 @@ header {
 .description__price {
   font-size: 0.8rem;
 }
-
-/* .description__title {
-  padding-top: 10px;
-  padding-left: 10px;
-} */
 
 .description__notation {
   margin-top: 38px;
@@ -402,13 +399,10 @@ header {
   cursor: pointer;
 }
 
-.hebergement__image {
-  height: 60%;
-}
-
 .hebergement__image,
 .activite__image {
 height: 60%;
+width: auto;
 border-radius: 10px 10px 0 0;
 object-fit: cover;
 object-position: 50% 60%;
@@ -496,21 +490,24 @@ footer ul {
   margin-bottom: 30px;
 }
 
-/* .footer__propos {
-  padding-top: 40px;
-} */
 
 /* ////////////////////// layout for screen from 450px ////////////////////////////// */
 
 @media all and (min-width: 450px) {
   .populaire__card {
-    height: 160px;
+    height: 200px;
   }
 
   .hebergement__card,
   .activite__card {
-    height: 320px;
+    height: 400px;
   }
+
+  .hebergement__image, .activite__image {
+    height: 60%;
+    width: auto;
+  }
+
 }
 /* //////////////////// layout for screen from 768px //////////////////////////////// */
 
@@ -711,7 +708,8 @@ footer ul {
     display: block;
     height: 100%;
   }
-
+ 
+  /* display acitivite car in grid */
   .activite__container {
     display: grid;
     grid-template-columns: repeat(4, minmax(100px, 1fr));
@@ -812,13 +810,6 @@ footer ul {
       width: 100%;
     }
 
-    .populaire__image {
-      width: 40%;
-      height: 100%;
-      border-radius: 10px 0 0 10px;
-      object-fit: cover;
-    }
-
     .populaire__title h2 {
       display: initial;
     }
@@ -841,7 +832,6 @@ footer ul {
     }
 
     .hebergement__link {
-      /* display: block; */
       width: 32%;
     }
 
