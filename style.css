@@ -83,7 +83,7 @@ header {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   flex-wrap: wrap;
 }
 
@@ -545,7 +545,7 @@ footer ul {
 
   .navigation__list li {
     text-align: center;
-    padding-top: 44px;
+    padding-top: 45px;
     border-top: solid 2px white;
   }
 
@@ -785,7 +785,7 @@ footer ul {
     }
 
     .navigation {
-      width: 32%;
+      width: fit-content;
     }
 
     .search__button--recherchez {
