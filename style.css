@@ -19,20 +19,17 @@ La police du site est Raleway. */
   /* border: solid 1px black; */
 }
 
-body {
+html {
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.3px;
+  font-size: 16px;
 }
 
 h2 {
+  font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
-  margin-top: 2rem;
 }
-
-/* h4 {
-  font-size: clamp(16px, 20vw, 20px);
-} */
 
 ul {
   list-style-type: none;
@@ -161,22 +158,23 @@ header {
 
 .search__button {
   border: solid 0.1px rgba(211, 211, 211, 0.3);
-  border-radius: 1rem;
+  border-radius: 1em;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 2em;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 .search__button__input {
   width: 100%;
   border: none;
-  padding: 0px 1rem;
+  padding: 0px 1em;
   font-weight: 600;
-  line-height: 49px;
+  line-height: 2.7em;
 }
 
 ::placeholder {
@@ -185,14 +183,14 @@ header {
 }
 
 .search__button__icon {
-  font-size: 20px;
+  font-size: 1.1em;
 }
 
 .search__button--markup {
   background: var(--two-clr);
-  border-radius: 10px 0 0 10px;
-  height: 49px;
-  width: 60px;
+  border-radius: 0.5em 0 0 0.5em;
+  height: 2.7em;
+  width: 3.4em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,9 +199,9 @@ header {
 .search__button--loupe {
   background: var(--one-clr);
   color: white;
-  border-radius: 10px;
-  height: 49px;
-  width: 60px;
+  border-radius: 0.5em;
+  height: 2.7em;
+  width: 3.4em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,13 +210,13 @@ header {
 .search__button--recherchez {
   background: var(--one-clr);
   color: white;
-  border-radius: 0 10px 10px 0;
-  height: 49px;
+  border-radius: 0 1em 1em 0;
+  height: 3em;
   width: 80%;
   align-items: center;
   display: none;
   text-align: center;
-  line-height: 49px;
+  line-height: 3em;
   font-weight: 500;
   font-size: 1rem;
 }
@@ -228,24 +226,24 @@ header {
 .filtres {
   padding: 0 1rem;
   margin: auto;
-  margin-bottom: 40px;
+  margin-bottom: 3rem;
   display: flex;
   flex-wrap: wrap;
 }
 
 .title {
   width: 100%;
-  padding-top: 5px;
-  padding-bottom: 15px;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .filtres__button {
   background: none;
-  border-radius: 20px;
+  border-radius: 2em;
   font-weight: 600;
   border: solid 0.1px rgba(211, 211, 211, 0.5);
-  margin: 0 5px 15px 0;
-  height: 45px;
+  margin: 0 1em 1em 0;
+  height: 3.5em;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -256,8 +254,8 @@ header {
 .filtres__icon {
   background: var(--two-clr);
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 3.3em;
+  height: 3.3em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,12 +264,12 @@ header {
 }
 
 .filtres__icon i {
-  font-size: 15px;
+  font-size: 1.2em;
   color: var(--one-clr);
 }
 
 .filtres__txt {
-  padding: 0 15px;
+  padding: 0 1em;
 }
 
 .filtres__button:hover .filtres__icon {
@@ -289,26 +287,26 @@ header {
 
 .filtres--info {
   display: flex;
-  padding-top: 10px;
+  padding-top: 1rem;
 }
 
 .filtres--info__icon {
   border: solid 1px var(--three-clr);
   border-radius: 50%;
   display: flex;
-  width: 30px;
-  height: 21px;
+  width: 2em;
+  height: 1.5em;
   justify-content: center;
   align-items: center;
 }
 
 .filtres--info__icon i {
-  font-size: 10px;
+  font-size: 0.7em;
   color: var(--one-clr);
 }
 
 .filtres--info__txt {
-  padding: 0 10px;
+  padding: 0 0.3em;
 }
 
 /* ******************** section populaires ************************* */
@@ -316,7 +314,7 @@ header {
 .populaire {
   padding: 0 1rem;
   background: var(--three-clr);
-  padding-bottom: 50px;
+  padding-bottom: 3rem;
 }
 
 .populaire__title {
@@ -326,14 +324,18 @@ header {
   position: relative;
 }
 
+.populaire__title h2 {
+  margin-top: 2rem;
+}
+
 .populaire__icon {
   position: absolute;
-  top: 35px;
-  right: 5px;
+  top: 2rem;
+  right: 1rem;
 }
 
 .populaire__icon i {
-  font-size: 23px;
+  font-size: 1.4em;
 }
 
 .populaire__link {
@@ -343,11 +345,11 @@ header {
 .populaire__card,
 .hebergement__card,
 .activite__card {
-  margin-bottom: 15px;
+  margin-bottom: 1em;
   display: flex;
   background: white;
-  border-radius: 10px;
-  padding: 7px;
+  border-radius: 1em;
+  padding: 0.3em;
   max-width: 100%;
   cursor: pointer;
   overflow: hidden;
@@ -364,23 +366,22 @@ header {
 .populaire__image {
   width: 40%;
   height: auto;
-  border-radius: 10px 0 0 10px;
+  border-radius: 0.8em 0 0 0.8em;
   object-fit: cover;
 }
 
 .populaire__description {
   width: 60%;
-  min-width: 120px;
-  padding-left: 20px;
-  padding-top: 8px;
+  min-width: 7em;
+  padding: 1em 1em 0 1em;
 }
 
 .description__price {
-  font-size: 0.8rem;
+  font-size: 0.8em;
 }
 
 .description__notation {
-  margin-top: 38px;
+  margin-top: 2.3em;
   color: var(--one-clr);
 }
 
@@ -405,23 +406,23 @@ header {
 .activite__image {
   height: 60%;
   width: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 0.8em 0.8em 0 0;
   object-fit: cover;
   object-position: 50% 60%;
 }
 
 .hebergement__description {
-  padding: 10px 0 0 10px;
+  padding: 0.5em 0 0 0.5em;
 }
 
 .hebergement__card .description__notation {
-  margin-top: 5px;
+  margin-top: 0.3em;
 }
 
 /* **************** section activite ****************** */
 
 .activite {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   padding: 0 1rem;
 }
 
@@ -430,7 +431,7 @@ header {
 }
 
 .activite__description {
-  padding: 16px 0 0 10px;
+  padding: 1em 0 0 1em;
 }
 
 /* *************** shadow & card on hover *****************/
@@ -479,15 +480,15 @@ footer {
 }
 
 footer h3 {
-  padding-bottom: 10px;
+  padding-bottom: 1rem;
 }
 
 footer li {
-  padding-bottom: 5px;
+  padding-bottom: 0.2em;
 }
 
 footer ul {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 /* ////////////////////// layout for screen from 450px ////////////////////////////// */
@@ -535,7 +536,7 @@ footer ul {
   }
 
   .navigation__list {
-    padding-right: 20px;
+    padding-right: 1rem;
     width: 25rem;
   }
 
