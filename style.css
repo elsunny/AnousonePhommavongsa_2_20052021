@@ -152,7 +152,8 @@ header {
 
 /* ************************* search section *********************** */
 
-.search {
+/* padding on all sections */
+.search, .filtres, .populaire, .hebergement, .activite {
   padding: 0 1rem;
 }
 
@@ -224,7 +225,6 @@ header {
 /* *********************** filtres section *************************** */
 
 .filtres {
-  padding: 0 1rem;
   margin: auto;
   margin-bottom: 3rem;
   display: flex;
@@ -312,7 +312,6 @@ header {
 /* ******************** section populaires ************************* */
 
 .populaire {
-  padding: 0 1rem;
   background: var(--three-clr);
   padding-bottom: 3rem;
 }
@@ -324,7 +323,7 @@ header {
   position: relative;
 }
 
-.populaire__title h2 {
+.populaire, .hebergement, .activite, h2 {
   margin-top: 2rem;
 }
 
@@ -391,10 +390,6 @@ header {
 
 /* ***************** section hebergements ************************** */
 
-.hebergement {
-  padding: 0 1rem;
-}
-
 .hebergement__card,
 .activite__card {
   flex-direction: column;
@@ -423,7 +418,7 @@ header {
 
 .activite {
   margin-bottom: 2rem;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
 }
 
 .activite__image {
@@ -898,6 +893,14 @@ footer ul {
 
     .activite--six .activite__image {
       height: 81%;
+    }
+
+    .activite--three .activite__image {
+      height: 74%;
+    }
+
+    .activite--five .activite__image {
+      height: 74%;
     }
 
     .search__button:hover ::placeholder {
