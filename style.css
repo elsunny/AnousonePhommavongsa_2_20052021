@@ -1,7 +1,7 @@
 /* Les couleurs de la charte sont le bleu #0065FC, et sa version plus claire #DEEBFF ainsi que le gris pour le fond #F2F2F2.
 La police du site est Raleway. */
 
-/* ////////////////////////// for screen from 320px ////////////////////////////////////*/
+/* ////////////////////////// for Small Screen from 320px ////////////////////////////////*/
 
 :root {
   --one-clr: #0065fc;
@@ -41,45 +41,7 @@ a {
   font-weight: 400;
 }
 
-/* *************** main section with grid layout for the seb sections **************** */
-.main {
-  margin: 0 auto;
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: 1fr 1fr 1fr 27%;
-  grid-template-areas:
-    "header header header header"
-    "search search search search"
-    "filtres filtres filtres filtres"
-    "populaire populaire populaire populaire"
-    "hebergement hebergement hebergement hebergement"
-    "activite activite activite activite"
-    "footer footer footer footer";
-}
-
-header {
-  grid-area: header;
-}
-.search {
-  grid-area: search;
-}
-.filtres {
-  grid-area: filtres;
-}
-.populaire {
-  grid-area: populaire;
-}
-.hebergement {
-  grid-area: hebergement;
-}
-.activite {
-  grid-area: activite;
-}
-.footer {
-  grid-area: footer;
-}
-
-/******************************** logo et menu **************************************/
+/******************************** SS / logo et menu **************************************/
 
 header {
   display: flex;
@@ -91,7 +53,7 @@ header {
   padding: 1.8rem 1rem 0 1rem;
 }
 
-/* drives the hebergement & activite menu to take the full width of small screen */
+/* SS / drives the hebergement & activite menu to take the full width of small screen */
 .navigation {
   width: 100%;
 }
@@ -100,7 +62,7 @@ header {
   display: flex;
 }
 
-/* place the inscrire button & style it with color */
+/* SS / position the inscrire button & style it with color */
 .navigation__list__item--inscrire {
   order: -1;
   position: absolute;
@@ -113,7 +75,7 @@ header {
   font-weight: 600;
 }
 
-/* position the hebergement & activite button in the navigation box */
+/* SS/ position the hebergement & activite button in the navigation box */
 .navigation__list__item--hebergement,
 .navigation__list__item--activite {
   flex: 1 1 0;
@@ -123,37 +85,35 @@ header {
   padding-top: 2rem;
 }
 
-/* change color for the menu on hover */
+/* SS / change color for the menu on hover */
 .navigation__list a:hover {
   color: var(--one-clr);
 }
 
-/* place line under the menu and change color on hover */
+/* SS / place line under the menu and change color on hover */
 .navigation__list__item--hebergement,
 .navigation__list__item--activite {
   border-bottom: solid 1px var(--three-clr);
 }
 
-.navigation__list__item--hebergement:hover {
-  border-bottom: solid 2px var(--one-clr);
-}
-
+.navigation__list__item--hebergement:hover,
 .navigation__list__item--activite:hover {
   border-bottom: solid 2px var(--one-clr);
 }
 
+.navigation__list__item--activite a:visited,
 .navigation__list__item--hebergement a:visited {
   border-bottom: solid 2px var(--one-clr);
 }
 
-.navigation__list__item--activite a:visited {
-  border-bottom: solid 2px var(--one-clr);
-}
+/* ************************* SS / search section *********************** */
 
-/* ************************* search section *********************** */
-
-/* padding on all sections */
-.search, .filtres, .populaire, .hebergement, .activite {
+/* SS / padding on all sections */
+.search,
+.filtres,
+.populaire,
+.hebergement,
+.activite {
   padding: 0 1rem;
 }
 
@@ -173,9 +133,9 @@ header {
 .search__button__input {
   width: 100%;
   border: none;
-  padding: 0px 1em;
+  padding: 0px 2em;
   font-weight: 600;
-  line-height: 2.7em;
+  line-height: 3.4em;
 }
 
 ::placeholder {
@@ -195,6 +155,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: -1rem;
+  z-index: 10;
 }
 
 .search__button--loupe {
@@ -206,6 +168,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: -1rem;
 }
 
 .search__button--recherchez {
@@ -222,7 +185,7 @@ header {
   font-size: 1rem;
 }
 
-/* *********************** filtres section *************************** */
+/* *********************** SS / filtres section *************************** */
 
 .filtres {
   margin: auto;
@@ -309,7 +272,7 @@ header {
   padding: 0 0.3em;
 }
 
-/* ******************** section populaires ************************* */
+/* ******************** SS / section populaires ************************* */
 
 .populaire {
   background: var(--three-clr);
@@ -323,7 +286,10 @@ header {
   position: relative;
 }
 
-.populaire, .hebergement, .activite, h2 {
+.populaire,
+.hebergement,
+.activite,
+h2 {
   margin-top: 2rem;
 }
 
@@ -384,11 +350,32 @@ header {
   color: var(--one-clr);
 }
 
-.description__notation__grey-star {
+/* .description__notation__grey-star {
+  color: var(--three-clr);
+} */
+.description__notation[data-rate="1"] .fa-star:nth-of-type(2),
+.description__notation[data-rate="1"] .fa-star:nth-of-type(3),
+.description__notation[data-rate="1"] .fa-star:nth-of-type(4),
+.description__notation[data-rate="1"] .fa-star:nth-of-type(5) {
   color: var(--three-clr);
 }
 
-/* ***************** section hebergements ************************** */
+.description__notation[data-rate="2"] .fa-star:nth-of-type(3),
+.description__notation[data-rate="2"] .fa-star:nth-of-type(4),
+.description__notation[data-rate="2"] .fa-star:nth-of-type(5) {
+  color: var(--three-clr);
+}
+
+.description__notation[data-rate="3"] .fa-star:nth-of-type(4),
+.description__notation[data-rate="3"] .fa-star:nth-of-type(5) {
+  color: var(--three-clr);
+}
+
+.description__notation[data-rate="4"] .fa-star:nth-of-type(5) {
+  color: var(--three-clr);
+}
+
+/* ***************** SS / section hebergements ************************** */
 
 .hebergement__card,
 .activite__card {
@@ -414,11 +401,10 @@ header {
   margin-top: 0.3em;
 }
 
-/* **************** section activite ****************** */
+/* **************** SS / section activite ****************** */
 
 .activite {
   margin-bottom: 2rem;
-  /* padding: 0 1rem; */
 }
 
 .activite__image {
@@ -429,45 +415,30 @@ header {
   padding: 1em 0 0 1em;
 }
 
-/* *************** shadow & card on hover *****************/
+/* *************** SS / shadow & card on hover *****************/
 
 .shadow {
-  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  /* SS / offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
-/*  card focus on mouse over */
+/*  SS / card focus on mouse over */
+
+.populaire__container:hover > *,
+.activite__container:hover > *,
 .hebergement__container:hover > * {
   opacity: 0.5;
   transition: 300ms all ease;
 }
 
+.populaire__container:hover > *:hover,
+.activite__container:hover > *:hover,
 .hebergement__container:hover > *:hover {
   opacity: 1;
   transform: scale(1.05, 1.05);
 }
 
-.activite__container:hover > * {
-  opacity: 0.5;
-  transition: 300ms all ease;
-}
-
-.activite__container:hover > *:hover {
-  opacity: 1;
-  transform: scale(1.05, 1.05);
-}
-
-.populaire__container:hover > * {
-  opacity: 0.5;
-  transition: 300ms all ease;
-}
-
-.populaire__container:hover > *:hover {
-  opacity: 1;
-  transform: scale(1.05, 1.05);
-}
-
-/* ****************************** footer ******************************* */
+/* ****************************** SS / footer ******************************* */
 footer {
   background-color: var(--three-clr);
   overflow: hidden;
@@ -504,22 +475,14 @@ footer ul {
     width: auto;
   }
 }
-/* //////////////////// layout for screen from 768px //////////////////////////////// */
+/* //////////////////// layout for Medium Screen from 768px //////////////////////////////// */
 
 @media all and (min-width: 768px) {
   .main {
     padding: 0 2rem;
-    grid-template-areas:
-      "header header header header"
-      "search search search search"
-      "filtres filtres filtres filtres"
-      "populaire populaire populaire populaire"
-      "hebergement hebergement hebergement hebergement"
-      "activite activite activite activite"
-      "footer footer footer footer";
   }
 
-  /* menu positionning */
+  /* MS / menu positionning */
 
   header {
     flex-wrap: initial;
@@ -555,7 +518,7 @@ footer ul {
     position: initial;
     padding-top: 40px;
   }
-  /* cancel line under menu */
+  /* MS / cancel line under menu */
 
   .navigation__list__item--hebergement,
   .navigation__list__item--activite {
@@ -570,7 +533,7 @@ footer ul {
     border-bottom: initial;
   }
 
-  /* menu line on top of item */
+  /* MS / menu line on top of item */
 
   .navigation__list__item--hebergement a::after {
     display: none;
@@ -584,7 +547,7 @@ footer ul {
     border-top: solid 2px var(--one-clr);
   }
 
-  /* search section */
+  /* MS / search section */
 
   .search__button {
     width: 50%;
@@ -602,7 +565,7 @@ footer ul {
     width: 100%;
   }
 
-  /* hebergement section */
+  /* MS / hebergement section */
 
   .hebergement {
     background: var(--three-clr);
@@ -633,7 +596,7 @@ footer ul {
     height: 68%;
   }
 
-  /* populaire */
+  /* MS / populaire */
 
   .populaire {
     border-radius: 20px;
@@ -700,7 +663,7 @@ footer ul {
     height: 100%;
   }
 
-  /* display acitivite car in grid */
+  /* MS / display acitivite car in grid */
   .activite__container {
     display: grid;
     grid-template-columns: repeat(4, minmax(100px, 1fr));
@@ -712,6 +675,7 @@ footer ul {
     height: 100%;
   }
 
+  /* MS / activite expanse display */
   .activite--one {
     grid-column: 1/3;
     grid-row: 1;
@@ -742,6 +706,7 @@ footer ul {
     grid-row: 2;
   }
 
+  /* MS / footer settings */
   .footer {
     display: flex;
     align-items: flex-start;
@@ -756,11 +721,15 @@ footer ul {
     height: 100%;
   }
 
-  /* ////////////////////////////// for desktop screen from 1200px /////////////////////// */
+  /* ////////////////////////////// for desktop Big Screen from 1200px ////////////////// */
 
   @media all and (min-width: 1200px) {
     .main {
       max-width: 1400px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 2rem;
+      margin: 0 auto;
       grid-template-areas:
         "header header header header"
         "search search search search"
@@ -770,6 +739,28 @@ footer ul {
         "hebergement hebergement hebergement populaire"
         "activite activite activite activite"
         "footer footer footer footer";
+    }
+
+    header {
+      grid-area: header;
+    }
+    .search {
+      grid-area: search;
+    }
+    .filtres {
+      grid-area: filtres;
+    }
+    .populaire {
+      grid-area: populaire;
+    }
+    .hebergement {
+      grid-area: hebergement;
+    }
+    .activite {
+      grid-area: activite;
+    }
+    .footer {
+      grid-area: footer;
     }
 
     .navigation {
@@ -788,16 +779,17 @@ footer ul {
     .populaire__container {
       flex-direction: column;
       align-items: center;
+      width: 22rem;
     }
 
-    .populaire__link {
+    .populaire__link,
+    .populaire__card {
       width: 100%;
     }
 
     .populaire__card {
       flex-direction: initial;
       height: 9rem;
-      width: 100%;
     }
 
     .populaire__title h2 {
@@ -808,14 +800,15 @@ footer ul {
       content: initial;
     }
 
-    .populaire__description {
-      position: relative;
-    }
-
     .populaire__title {
       padding: initial;
     }
 
+    .populaire__description {
+      position: relative;
+    }
+
+    /* BS / positionning the stars notation */
     .populaire__description .description__notation {
       position: absolute;
       bottom: 5px;
@@ -834,6 +827,7 @@ footer ul {
       height: 60%;
     }
 
+    /* BS / handle activite image card expansion particularity */
     .activite__card {
       width: 100%;
       height: 100%;
@@ -869,36 +863,30 @@ footer ul {
       grid-row: 2/3;
     }
 
-    .activite__link:nth-of-type(3) {
+    .activite__link:nth-of-type(3),
+    .activite__link:nth-of-type(5) {
       height: 160px;
+    }
+
+    .activite__link:nth-of-type(3) {
       margin-top: auto;
     }
 
     .activite__link:nth-of-type(5) {
-      height: 160px;
       margin-bottom: auto;
     }
 
-    .activite--one .activite__image {
-      height: 91%;
-    }
-
+    .activite--one .activite__image,
     .activite--four .activite__image {
       height: 91%;
     }
 
-    .activite--two .activite__image {
-      height: 81%;
-    }
-
+    .activite--two .activite__image,
     .activite--six .activite__image {
       height: 81%;
     }
 
-    .activite--three .activite__image {
-      height: 74%;
-    }
-
+    .activite--three .activite__image,
     .activite--five .activite__image {
       height: 74%;
     }
@@ -907,6 +895,7 @@ footer ul {
       color: var(--one-clr);
     }
 
+    /* BS / footer */
     .footer {
       max-width: 1400px;
       margin: 0 auto;
