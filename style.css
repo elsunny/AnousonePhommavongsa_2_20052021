@@ -135,12 +135,14 @@ header {
   border: none;
   padding: 0px 2em;
   font-weight: 600;
-  line-height: 3.4em;
+  line-height: 2.7em;
 }
 
-::placeholder {
+input,
+input::placeholder {
   color: var(--txt-clr);
   opacity: 1;
+  font-size: 18px;
 }
 
 .search__button__icon {
@@ -206,7 +208,7 @@ header {
   font-weight: 600;
   border: solid 0.1px rgba(211, 211, 211, 0.5);
   margin: 0 1em 1em 0;
-  height: 3.5em;
+  height: 3.3em;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -276,7 +278,7 @@ header {
 
 .populaire {
   background: var(--three-clr);
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 .populaire__title {
@@ -295,7 +297,7 @@ h2 {
 
 .populaire__icon {
   position: absolute;
-  top: 2rem;
+  top: 2.1rem;
   right: 1rem;
 }
 
@@ -380,7 +382,7 @@ h2 {
 .hebergement__card,
 .activite__card {
   flex-direction: column;
-  height: 12rem;
+  height: 13rem;
   cursor: pointer;
 }
 
@@ -550,7 +552,11 @@ footer ul {
   /* MS / search section */
 
   .search__button {
-    width: 50%;
+    width: 65%;
+  }
+
+  .search__button--markup {
+    width: 6em;
   }
 
   .search__button--loupe {
@@ -767,6 +773,18 @@ footer ul {
       width: fit-content;
     }
 
+    .navigation__list li {
+      text-align: right;
+    }
+
+    .search__button {
+      width: 56%;
+    }
+
+    .search__button:hover ::placeholder {
+      color: var(--one-clr);
+    }
+
     .search__button--recherchez {
       width: 35%;
     }
@@ -889,10 +907,6 @@ footer ul {
     .activite--three .activite__image,
     .activite--five .activite__image {
       height: 74%;
-    }
-
-    .search__button:hover ::placeholder {
-      color: var(--one-clr);
     }
 
     /* BS / footer */
